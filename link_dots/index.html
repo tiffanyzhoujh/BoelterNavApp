@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Link Dots</title>
+    <style>
+        #image-container {
+            position: relative;
+            display: inline-block;
+        }
+        .dot {
+            width: 8px;
+            height: 8px;
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+            transform: translate(-50%, -50%);
+        }
+        .label {
+            position: absolute;
+            color: black;
+            font-size: 14px;
+            font-weight: bold;
+            transform: translate(-50%, -50%);
+        }
+        .edge {
+            position: absolute;
+            background-color: black;
+            transform-origin: 0 0;
+            height: 2px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Link & Remove Dots</h2>
+    <div id="image-container">
+        <!-- TODO: CHANGE -->
+        <img id="clickable-image" src="./images/5f.jpg" alt="Clickable Image">
+    </div>
+    
+    <div>
+        <h3>Add Link</h3>
+        <input type="number" id="dot1" placeholder="dot1">
+        <input type="number" id="dot2" placeholder="dot2">
+        <button onclick="linkDots()">Link</button>
+    </div>
+
+    <div>
+        <h3>Remove Link</h3>
+        <input type="number" id="removeDot1" placeholder="dot1">
+        <input type="number" id="removeDot2" placeholder="dot2">
+        <button onclick="removeLink()">Remove Link</button>
+    </div>
+
+    <script>
+        let dots = [];
+        let edges = [];
+        // TODO: CHANGE
+        let floorname="5f-";
+
+        // Load existing dots from coord.csv
+        fetch('/get-coords')
+            .then(response => response.json())
+            .then(data => {
+                dots = data;
+                let container = document.getElementById("image-container");
+
+                dots.forEach(dot => {
+                    let dotElem = document.createElement("div");
+                    dotElem.className = "dot";
+                    dotElem.style.left = `${dot.x}px`;
+                    dotElem.style.top = `${dot.y}px`;
+                    container.appendChild(dotElem);
+                    
+                    let label = document.createElement("div");
+                    label.className = "label";
+                    label.style.left = `${dot.x + 10}px`;
+                    label.style.top = `${dot.y}px`;
+                    label.textContent = dot.number;
+                    container.appendChild(label);
+                });
+
+                // Load existing edges
+                fetch('/get-edges')
+                    .then(response => response.json())
+                    .then(edgeData => {
+                        edges = edgeData;
+                        drawEdges();
+                    });
+            });
+
+        function drawEdges() {
+            let container = document.getElementById("image-container");
+
+            for (let dot1 in edges) {
+                edges[dot1].forEach(dot2 => { 
+
+                    let dotA = dots.find(d => floorname+d.number == dot1);
+                    let dotB = dots.find(d => floorname+d.number == dot2);
+
+                    if (dotA && dotB) {
+                        let edge = document.createElement("div");
+                        edge.className = "edge";
+                        edge.dataset.edge = `${dot1}-${dot2}`;
+
+                        let dx = dotB.x - dotA.x;
+                        let dy = dotB.y - dotA.y;
+                        let length = Math.sqrt(dx * dx + dy * dy);
+                        let angle = Math.atan2(dy, dx) * 180 / Math.PI;
+
+                        edge.style.left = `${dotA.x}px`;
+                        edge.style.top = `${dotA.y}px`;
+                        edge.style.width = `${length}px`;
+                        edge.style.transform = `rotate(${angle}deg)`;
+                        container.appendChild(edge);
+                    }
+                });
+            }
+        }
+       
+        function linkDots() {
+            let dot1Num = floorname+parseInt(document.getElementById("dot1").value);
+            let dot2Num = floorname+parseInt(document.getElementById("dot2").value);
+    
+                fetch('/add-edge', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ dot1: dot1Num, dot2: dot2Num })
+                }).then(() => location.reload()); // Refresh to update edges
+        }
+
+        function removeLink() {
+            let dot1Num = floorname+parseInt(document.getElementById("removeDot1").value);
+            let dot2Num = floorname+parseInt(document.getElementById("removeDot2").value);
+
+                fetch('/remove-edge', {
+                    method: 'POST',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify({ dot1: dot1Num, dot2: dot2Num })
+                }).then(() => location.reload()); // Refresh to update edges
+        }
+    </script>
+</body>
+</html>
