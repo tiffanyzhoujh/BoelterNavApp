@@ -53,11 +53,6 @@ _coordinates = load_coordinates(coord_files)
 _edges = load_edges(edge_files)
 _graph = build_weighted_graph(_coordinates, _edges, elevator_connections)
 
-# def get_shortest_path(start, end):
-#     if start not in _graph.nodes or end not in _graph.nodes:
-#         raise ValueError("Invalid start or destination node.")
-#     return nx.shortest_path(_graph, source=start, target=end, weight="weight")
-
 def get_shortest_path(start, end):
     if start not in _graph.nodes or end not in _graph.nodes:
         raise ValueError("Invalid start or destination node.")

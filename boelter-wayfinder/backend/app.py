@@ -13,7 +13,7 @@ def compute_path():
 
     if not start or not dest:
         return jsonify({'error': 'Missing start or destination'}), 400
-
+    
     try:
         path = get_shortest_path(start, dest)
         return jsonify({'path': path})
