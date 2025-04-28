@@ -73,3 +73,22 @@ def get_shortest_path(start, end):
         })
 
     return result
+
+def get_floorplans(path):
+    floors_in_order = []
+    seen = set()
+
+    for node in path:
+        floor = node['floor']
+        if floor not in seen:
+            floors_in_order.append(floor)
+            seen.add(floor)
+    print("floors in order:")
+    print(floors_in_order)
+
+    floorplan_paths = [
+        os.path.join('png_floorplans', f"floor-{floor[0]}-new.png")
+        for floor in floors_in_order
+    ]
+
+    return floorplan_paths

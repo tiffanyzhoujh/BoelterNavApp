@@ -1,11 +1,11 @@
 <template>
   <div class="multi-floor-container">
-    <div
+    <!-- <div
       v-for="floor in floorsInPath"
       :key="floor"
       class="floor-block"
     >
-      <h3 class="floor-label">Floor {{ floor }}</h3> <!-- 👈 Label here -->
+      <h3 class="floor-label">Floor {{ floor }}</h3> 
 
       <div class="svg-wrapper">
         <img
@@ -14,6 +14,12 @@
           :alt="`Floorplan for ${floor}`"
         >
       </div>
+    </div> -->
+
+    <div class="floorplans">
+      <div v-for="(imgSrc, index) in imageSources" :key="index" class="floorplan-block">
+        <img :src="imgSrc" class="floorplan-image" />
+      </div>
     </div>
   </div>
 </template>
@@ -21,8 +27,12 @@
 
 <script setup>
 import { ref, watch, computed } from 'vue'
+import JSZip from 'jszip'
 import axios from 'axios'
 import roomMapping from '@/data/rooms.json'
+
+
+const imageSources = ref([])
 
 const props = defineProps({
   start: String,
@@ -44,13 +54,13 @@ async function fetchPath() {
     if (startLevel == 1) {
       destLevel = 2
     }
-    destdot = roomMapping["Restroom (Women, "+destLevel+"F)"]
+    destDot = roomMapping["Restroom (Women, "+destLevel+"F)"]
   } else if (props.destination == "Restroom (M)") {
     var destLevel = startLevel
     if (startLevel == 1) {
       destLevel = 2
     }
-    destdot = roomMapping["Restroom (Men, "+destLevel+"F)"]
+    destDot = roomMapping["Restroom (Men, "+destLevel+"F)"]
   } else if (props.destination == "Restroom (All Gender)") {
     // gender inclusive restroom on floor 5, 6, 8
     var destLevel = startLevel
@@ -59,29 +69,38 @@ async function fetchPath() {
     } else if (startLevel == 7 || startLevel == 9) {
       destLevel = 8
     }
-    destdot = roomMapping["Restroom (Gender Inclusive, "+destLevel+"F)"]
+    destDot = roomMapping["Restroom (Gender Inclusive, "+destLevel+"F)"]
   } else {
     // normal case
     destDot = roomMapping[props.destination]
   }
 
+  console.log(startDot)
+  console.log(destDot)
+
   if (!startDot || !destDot || startDot === destDot) return
 
-  const res = await axios.post('http://localhost:5000/api/path', {
-    start: startDot,
-    dest: destDot,
-  })
 
-  pathDots.value = res.data.path
-  console.log('Path dots with coords:', pathDots.value)
+  const res = await axios.post('http://192.168.1.96:5000/api/path', {
+    start: startDot,
+    dest: destDot
+  }, { responseType: 'blob' }) 
+  // result is a zip of floorplan pictures
+  const zip = await JSZip.loadAsync(res.data)
+  const newImageSources = []
+  for (const filename of Object.keys(zip.files)) {
+    const file = zip.files[filename]
+
+    if (!file.dir && filename.endsWith('.png')) {
+      const blob = await file.async('blob')
+      const url = URL.createObjectURL(blob)
+      newImageSources.push(url)
+    }
+  }
+  imageSources.value = newImageSources
+  console.log("Extracted images:", imageSources.value)
 }
 
-const floorsInPath = computed(() =>
-  [...new Set(pathDots.value.map(p => p.floor))]
-)
-
-const getSvgPath = floor =>
-  new URL(`../assets/floorplans/floor-${floor}.svg`, import.meta.url).href
 </script>
 
 <style scoped>
@@ -102,5 +121,9 @@ const getSvgPath = floor =>
 .floor-image {
   width: 100%;
   display: block;
+}
+
+img {
+  height: 50%;
 }
 </style>
