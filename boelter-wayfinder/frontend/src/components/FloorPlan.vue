@@ -1,21 +1,5 @@
 <template>
   <div class="multi-floor-container">
-    <!-- <div
-      v-for="floor in floorsInPath"
-      :key="floor"
-      class="floor-block"
-    >
-      <h3 class="floor-label">Floor {{ floor }}</h3> 
-
-      <div class="svg-wrapper">
-        <img
-          :src="getSvgPath(floor)"
-          class="floor-image"
-          :alt="`Floorplan for ${floor}`"
-        >
-      </div>
-    </div> -->
-
     <div class="floorplans">
       <div v-for="(imgSrc, index) in imageSources" :key="index" class="floorplan-block">
         <img :src="imgSrc" class="floorplan-image" />
@@ -124,6 +108,6 @@ async function fetchPath() {
 }
 
 img {
-  height: 50%;
+  width: 100%;
 }
 </style>

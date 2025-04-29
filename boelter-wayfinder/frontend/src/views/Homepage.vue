@@ -61,7 +61,7 @@
   const router = useRouter()
   const suggestions = [
     'Engineering Library', 
-    '8500PH', 
+    '8500', 
     '8251',
     '3400',
     'Restroom (W)', 

@@ -1,10 +1,13 @@
 import json, csv, math, networkx as nx, os
 from itertools import combinations
+import csv
+from PIL import Image, ImageDraw, ImageFont
 
 def euclidean_distance(coord1, coord2):
     return math.sqrt((coord1[0] - coord2[0])**2 + (coord1[1] - coord2[1])**2)
 
 def load_coordinates(csv_files):
+    # print("loading coordinates...")
     coordinates = {}
     for csv_file in csv_files:
         with open(os.path.join('data', csv_file), newline='') as file:
@@ -16,6 +19,7 @@ def load_coordinates(csv_files):
     return coordinates
 
 def load_edges(json_files):
+    # print("loading edges...")
     adjacency_list = {}
     for json_file in json_files:
         with open(os.path.join('data', json_file)) as file:
@@ -52,13 +56,18 @@ elevator_connections = [
 _coordinates = load_coordinates(coord_files)
 _edges = load_edges(edge_files)
 _graph = build_weighted_graph(_coordinates, _edges, elevator_connections)
+# print("Available graph nodes:", list(_graph.nodes))
 
 def get_shortest_path(start, end):
+    print("looking for shortest path...")
     if start not in _graph.nodes or end not in _graph.nodes:
+        # print(start)
+        # print(end)
+        # print("invalid start or dest node...")
         raise ValueError("Invalid start or destination node.")
 
     path = nx.shortest_path(_graph, source=start, target=end, weight="weight")
-
+    # print("path found...")
     result = []
     for node in path:
         if node not in _coordinates:
@@ -71,10 +80,13 @@ def get_shortest_path(start, end):
             "y": y,
             "floor": floor
         })
-
+    print("shortest path result:")
+    print(result)
     return result
 
-def get_floorplans(path):
+def get_floorplans(path, output_dir):
+    os.makedirs(output_dir, exist_ok=True)  # make sure the folder exists
+
     floors_in_order = []
     seen = set()
 
@@ -83,12 +95,41 @@ def get_floorplans(path):
         if floor not in seen:
             floors_in_order.append(floor)
             seen.add(floor)
+
     print("floors in order:")
     print(floors_in_order)
 
-    floorplan_paths = [
-        os.path.join('png_floorplans', f"floor-{floor[0]}-new.png")
-        for floor in floors_in_order
-    ]
+    floor_to_nodes = {}
+    for node in path:
+        floor = node['floor']
+        if floor not in floor_to_nodes:
+            floor_to_nodes[floor] = []
+        floor_to_nodes[floor].append(node)
 
-    return floorplan_paths
+    output_paths = []
+
+    for floor in floors_in_order:
+        input_png_path = os.path.join('png_floorplans', f"f{floor[0]}.png")
+        img = Image.open(input_png_path)
+        draw = ImageDraw.Draw(img)
+        font = ImageFont.load_default()
+
+        nodes = floor_to_nodes.get(floor, [])
+
+        if len(nodes) >= 2:
+            for i in range(len(nodes) - 1):
+                x1, y1 = nodes[i]['x'], nodes[i]['y']
+                x2, y2 = nodes[i + 1]['x'], nodes[i + 1]['y']
+                draw.line((x1, y1, x2, y2), fill='red', width=8)
+
+        # optional: draw points
+        for node in nodes:
+            x, y = node['x'], node['y']
+            radius = 10
+            draw.ellipse((x - radius, y - radius, x + radius, y + radius), fill='blue', outline='black')
+
+        output_path = os.path.join(output_dir, f"{floor}-path.png")
+        img.save(output_path)
+        output_paths.append(output_path)
+
+    return output_paths

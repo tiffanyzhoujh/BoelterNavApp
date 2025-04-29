@@ -5,10 +5,9 @@ const app = express();
 app.use(express.json());
 app.use(express.static('.'));
 
-const floorname = "5f-"; // TODO: CHANGE
-const csvFile = floorname+'coord.csv';
+const floorname = "9f"; // TODO: CHANGE
+const csvFile = floorname+'-new-coord.csv';
 
-// Write header if the file does not exist
 if (!fs.existsSync(csvFile)) {
     fs.writeFileSync(csvFile, 'Label,X,Y\n');
 }

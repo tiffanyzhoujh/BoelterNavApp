@@ -6,8 +6,8 @@ const app = express();
 app.use(express.json());
 app.use(express.static('.')); 
 
-const floorname = "5f"; // TODO: CHANGE
-const coordsFile = floorname+'-coord.csv'; 
+const floorname = "1f"; // TODO: CHANGE
+const coordsFile = floorname+'-uniform-coord.csv'; 
 const edgesFile = floorname+'-edges.json';
 
 // Load coordinates from coord.csv
