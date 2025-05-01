@@ -75,7 +75,7 @@ async function fetchPath() {
   if (!startDot || !destDot || startDot === destDot) return
 
 
-  const res = await axios.post('http://192.168.50.18:5000/api/path', {
+  const res = await axios.post('https://boelterwayfinderbackend.onrender.com/api/path', {
     start: startDot,
     dest: destDot
   }, { responseType: 'blob' }) 
