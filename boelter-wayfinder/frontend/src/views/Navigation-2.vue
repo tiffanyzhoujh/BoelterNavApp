@@ -82,7 +82,6 @@
     
     <script setup>
     import { ref, onMounted } from 'vue'
-    import { useRoute } from 'vue-router'
     import FloorPlan from '../components/FloorPlan.vue'
     import NullStateFloorPlan from '../components/NullStateFloorPlan.vue'
     import InvalidStateFloorPlan from '../components/InvalidStateFloorPlan.vue'

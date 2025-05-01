@@ -1,5 +1,4 @@
 <template>
-  <div class="page-container">
     <v-container class="fill-height d-flex flex-column justify-center align-center text-center">
     <!-- title -->
     <div class="title">
@@ -41,7 +40,6 @@
 
     </div>
   </v-container>
-  </div>
 </template>
   
 <script setup>
@@ -67,6 +65,8 @@
     'Restroom (W)', 
     'Restroom (M)',
     'Restroom (All Gender)', 
+    '5440',
+    'SEAS Cafe'
   ]
   
   const selectDestination = (dest) => {
@@ -82,9 +82,7 @@
 </script>
 
 <style scoped>
-.page-container {
-  width: 90%;
-}
+
 .title {
   display: flex;
   flex-direction: row;

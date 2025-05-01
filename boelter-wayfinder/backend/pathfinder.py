@@ -133,3 +133,32 @@ def get_floorplans(path, output_dir):
         output_paths.append(output_path)
 
     return output_paths
+
+def draw_arrow(draw, x1, y1, x2, y2, color='light blue', width=30, head_size=48):
+    draw.line((x1, y1, x2, y2), fill=color, width=width)
+
+    # Calculate direction vector
+    dx = x2 - x1
+    dy = y2 - y1
+    length = math.hypot(dx, dy)
+    if length == 0:
+        return  # avoid division by zero
+
+    # Normalize direction
+    udx = dx / length
+    udy = dy / length
+
+    # Arrowhead base position (a bit before the end)
+    base_x = x2 - udx * head_size
+    base_y = y2 - udy * head_size
+
+    # Perpendicular vectors for arrowhead wings
+    perp_x = -udy * head_size / 2
+    perp_y = udx * head_size / 2
+
+    # Triangle points
+    p1 = (x2, y2)
+    p2 = (base_x + perp_x, base_y + perp_y)
+    p3 = (base_x - perp_x, base_y - perp_y)
+
+    draw.polygon([p1, p2, p3], fill=color)

@@ -1,5 +1,10 @@
 <template>
   <div class="multi-floor-container">
+    <!-- Compass Icon -->
+    <v-btn icon class="elevation-2 compass-button">
+      <img src="@/assets/compass.svg" class="compass-icon"/>
+    </v-btn>
+
     <div class="floorplans">
       <div v-for="(imgSrc, index) in imageSources" :key="index" class="floorplan-block">
         <img :src="imgSrc" class="floorplan-image" />
@@ -14,16 +19,24 @@ import { ref, watch, computed } from 'vue'
 import JSZip from 'jszip'
 import axios from 'axios'
 import roomMapping from '@/data/rooms.json'
-
+import { useRouter } from 'vue-router';
+const router = useRouter();
 
 const imageSources = ref([])
-
 const props = defineProps({
   start: String,
   destination: String,
 })
 
-const pathDots = ref([])
+function goToCompass() { // access to orientation of the device required
+  router.push({
+    name: 'Compass',
+    query: {
+      start: props.start,
+      destination: props.destination,
+    },
+  })
+}
 
 watch(() => [props.start, props.destination], fetchPath, { immediate: true })
 
@@ -59,13 +72,10 @@ async function fetchPath() {
     destDot = roomMapping[props.destination]
   }
 
-  console.log(startDot)
-  console.log(destDot)
-
   if (!startDot || !destDot || startDot === destDot) return
 
 
-  const res = await axios.post('http://192.168.1.96:5000/api/path', {
+  const res = await axios.post('http://192.168.50.18:5000/api/path', {
     start: startDot,
     dest: destDot
   }, { responseType: 'blob' }) 
@@ -82,9 +92,8 @@ async function fetchPath() {
     }
   }
   imageSources.value = newImageSources
-  console.log("Extracted images:", imageSources.value)
+  // console.log("Extracted images:", imageSources.value)
 }
-
 </script>
 
 <style scoped>
@@ -107,7 +116,19 @@ async function fetchPath() {
   display: block;
 }
 
-img {
+.floorplan-image {
   width: 100%;
+}
+
+.compass-button {
+  position: absolute;
+  margin: 20px;
+  width: 40px;
+  z-index: 1000;
+  opacity: 0.9;
+}
+
+.compass-icon {
+  width: 30px;
 }
 </style>

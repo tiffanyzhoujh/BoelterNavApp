@@ -62,59 +62,68 @@
     </v-container>
 </template>
     
-    <script setup>
-    import { ref, onMounted } from 'vue'
-    import { useRoute } from 'vue-router'
-    import FloorPlan from '../components/FloorPlan.vue'
-    import NullStateFloorPlan from '../components/NullStateFloorPlan.vue'
-    import InvalidStateFloorPlan from '../components/InvalidStateFloorPlan.vue'
-    import rooms from '@/data/rooms.json'
-    import '@mdi/font/css/materialdesignicons.css'
-    import { useRouter } from 'vue-router'
+<script setup>
+  import { ref, onMounted, watch } from 'vue'
+  import { useRoute } from 'vue-router'
+  import FloorPlan from '../components/FloorPlan.vue'
+  import NullStateFloorPlan from '../components/NullStateFloorPlan.vue'
+  import InvalidStateFloorPlan from '../components/InvalidStateFloorPlan.vue'
+  import rooms from '@/data/rooms.json'
+  import '@mdi/font/css/materialdesignicons.css'
+  import { useRouter } from 'vue-router'
+
+  const router = useRouter()
+  const logo = new URL('@/assets/logo.svg', import.meta.url).href
+  const route = useRoute()
+  const destination = ref('')
+  const start = ref('')
+  const roomOptions = Object.keys(rooms).map(key => ({
+    label: key,
+    value: key
+  }))
+
+  const swapInputs = () => {
+    const temp = start.value
+    start.value = destination.value
+    destination.value = temp
+  }
   
-    const router = useRouter()
-    const logo = new URL('@/assets/logo.svg', import.meta.url).href
-    const route = useRoute()
-    const destination = ref('')
-    const start = ref('')
-    const roomOptions = Object.keys(rooms).map(key => ({
-      label: key,
-      value: key
-    }))
   
-    const swapInputs = () => {
-      const temp = start.value
-      start.value = destination.value
-      destination.value = temp
-    }
-    
-    
-    onMounted(() => {
-      destination.value = route.query.destination || ''
-    })
-  </script>  
-  
+  onMounted(() => {
+    start.value = route.query.start || ''
+    destination.value = route.query.destination || ''
+  })
+
+  watch(
+  () => [route.query.start, route.query.destination],
+  ([newStart, newDest]) => {
+    start.value = newStart || ''
+    destination.value = newDest || ''
+  }
+)
+</script>  
+
 <style scoped>
-  .input-field {
-    margin-bottom: -10px;
-    padding-left: 12px;
-    margin-top: 12px;
-  }
-  .fixed-header {
-    flex-shrink: 0;
-    background-color: white; /* keep header visible */
-    z-index: 1;
-    max-height: 40vh;
-  }
-  .scrollable-content {
-    flex-grow: 1;
-    overflow-y: auto;
-    padding-top: 12px;
-  }
-  .nav {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    overflow: hidden;
-  }
+.input-field {
+  margin-bottom: -10px;
+  padding-left: 12px;
+  margin-top: 12px;
+}
+.fixed-header {
+  flex-shrink: 0;
+  background-color: white; /* keep header visible */
+  z-index: 1;
+  max-height: 40vh;
+}
+.scrollable-content {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding-top: 12px;
+}
+.nav {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+}
 </style>
