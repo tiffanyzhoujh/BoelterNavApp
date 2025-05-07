@@ -76,7 +76,8 @@ async function fetchPath() {
 
 
   const res = await axios.post('https://boelterwayfinderbackend.onrender.com/api/path', {
-    start: startDot,
+    // const res = await axios.post('http://192.168.1.96:5000/api/path', {  
+  start: startDot,
     dest: destDot
   }, { responseType: 'blob' }) 
   // result is a zip of floorplan pictures

@@ -56,10 +56,26 @@ elevator_connections = [
 _coordinates = load_coordinates(coord_files)
 _edges = load_edges(edge_files)
 _graph = build_weighted_graph(_coordinates, _edges, elevator_connections)
-# print("Available graph nodes:", list(_graph.nodes))
+
+
+# load the PNG icons 
+start_icon_path = os.path.join('assets', 'start.png')
+end_icon_path = os.path.join('assets', 'end.png')
+start_icon = Image.open(start_icon_path).convert('RGBA')
+end_icon = Image.open(end_icon_path).convert('RGBA')
+icon_size = (100, 50)
+start_icon = start_icon.resize(icon_size, Image.Resampling.LANCZOS)
+end_icon = end_icon.resize(icon_size, Image.Resampling.LANCZOS)
+# opacity 80%
+start_icon_transparent = start_icon.copy()
+end_icon_transparent = end_icon.copy()
+start_icon_transparent.putalpha(230)
+end_icon_transparent.putalpha(230)
+
+
 
 def get_shortest_path(start, end):
-    print("looking for shortest path...")
+    # print("looking for shortest path...")
     if start not in _graph.nodes or end not in _graph.nodes:
         # print(start)
         # print(end)
@@ -80,8 +96,8 @@ def get_shortest_path(start, end):
             "y": y,
             "floor": floor
         })
-    print("shortest path result:")
-    print(result)
+    # print("shortest path result:")
+    # print(result)
     return result
 
 def get_floorplans(path, output_dir):
@@ -112,21 +128,23 @@ def get_floorplans(path, output_dir):
         input_png_path = os.path.join('png_floorplans', f"f{floor[0]}.png")
         img = Image.open(input_png_path)
         draw = ImageDraw.Draw(img)
-        font = ImageFont.load_default()
-
         nodes = floor_to_nodes.get(floor, [])
-
+        # draw the line
         if len(nodes) >= 2:
             for i in range(len(nodes) - 1):
                 x1, y1 = nodes[i]['x'], nodes[i]['y']
                 x2, y2 = nodes[i + 1]['x'], nodes[i + 1]['y']
-                draw.line((x1, y1, x2, y2), fill='red', width=8)
-
-        # optional: draw points
+                draw.line((x1, y1, x2, y2), fill='#48AEE2', width=20)
+        # draw other points
+        radius = 8
         for node in nodes:
             x, y = node['x'], node['y']
-            radius = 10
-            draw.ellipse((x - radius, y - radius, x + radius, y + radius), fill='blue', outline='black')
+            draw.ellipse((x - radius, y - radius, x + radius, y + radius), fill='#48AEE2')   
+        # draw start and end icons
+        start_x, start_y = nodes[0]['x'], nodes[0]['y']
+        end_x, end_y = nodes[-1]['x'], nodes[-1]['y']
+        img.paste(start_icon_transparent, (start_x - 20, start_y - 20), start_icon_transparent)
+        img.paste(end_icon_transparent, (end_x + 20, end_y + 20), end_icon_transparent)
 
         output_path = os.path.join(output_dir, f"{floor}-path.png")
         img.save(output_path)
