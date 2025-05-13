@@ -5,20 +5,6 @@
       <img src="@/assets/compass.svg" class="compass-icon"/>
     </v-btn>
 
-    <!-- floor sidebar -->
-    <!-- <div class="sidebar">
-      <v-btn 
-        icon
-        v-for="(floor, index) in floors"
-        :key="index"
-        class="floor-button elevation-1"
-        :color="activeFloor === floor ? '#48AEE2' : '#f1f5f8'"
-        @click="activeFloor = floor"
-      >
-        {{ floor }}
-      </v-btn>
-    </div> -->
-
      <!-- Floor Sidebar (Hidden if only one floor exists) -->
      <div v-if="floors.length > 1" class="sidebar">
       <v-btn 
@@ -29,7 +15,7 @@
         :color="activeFloor === floor ? '#48AEE2' : '#f1f5f8'"
         @click="activeFloor = floor"
       >
-        {{ floor }}
+        {{ floor.split('-')[0] }}
       </v-btn>
     </div>
 
@@ -108,7 +94,7 @@ async function fetchPath() {
 
 
   const res = await axios.post('https://boelterwayfinderbackend.onrender.com/api/path', {
-    // const res = await axios.post('http://192.168.1.96:5000/api/path', {  
+  // const res = await axios.post('http://192.168.1.96:5000/api/path', {  
   start: startDot,
     dest: destDot
   }, { responseType: 'blob' }) 
@@ -122,9 +108,16 @@ async function fetchPath() {
     if (!file.dir && filename.endsWith('.png')) {
       const blob = await file.async('blob')
       const url = URL.createObjectURL(blob)
-      const floor = filename.split('-')[0]
-      newImageSources[floor] = url
-      newFloors.push(floor)
+
+      // const floor = filename.split('-')[0]
+      // newImageSources[floor] = url
+      // newFloors.push(floor)
+
+      const [floor, index] = filename.split('-')
+      const key = `${floor}-${index}`
+      newImageSources[key] = url
+      newFloors.push(key)
+
     }
   }
   imageSources.value = newImageSources

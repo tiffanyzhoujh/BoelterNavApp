@@ -37,10 +37,17 @@ def build_weighted_graph(coords, adjacency_list, elevator_connections):
             if node in coords and neighbor in coords:
                 weight = euclidean_distance(coords[node], coords[neighbor])
                 G.add_edge(node, neighbor, weight=weight)
+    # for elevator in elevator_connections:
+    #     for floor_a, floor_b in combinations(elevator, 2):
+    #         if floor_a in coords and floor_b in coords:
+    #             G.add_edge(floor_a, floor_b, weight=0.1)
+    # only connect the next floor
     for elevator in elevator_connections:
-        for floor_a, floor_b in combinations(elevator, 2):
+        for i in range(len(elevator) - 1):
+            floor_a = elevator[i]
+            floor_b = elevator[i + 1]
             if floor_a in coords and floor_b in coords:
-                G.add_edge(floor_a, floor_b, weight=0.1)
+                G.add_edge(floor_a, floor_b, weight=100)
     return G
 
 coord_files = [f"{f}f-coord.csv" for f in range(1, 10)]
@@ -75,16 +82,12 @@ end_icon_transparent.putalpha(230)
 
 
 def get_shortest_path(start, end):
-    # print("looking for shortest path...")
     if start not in _graph.nodes or end not in _graph.nodes:
-        # print(start)
-        # print(end)
-        # print("invalid start or dest node...")
         raise ValueError("Invalid start or destination node.")
 
     path = nx.shortest_path(_graph, source=start, target=end, weight="weight")
-    # print("path found...")
     result = []
+    print("shortest path result:")
     for node in path:
         if node not in _coordinates:
             continue
@@ -96,87 +99,133 @@ def get_shortest_path(start, end):
             "y": y,
             "floor": floor
         })
-    # print("shortest path result:")
-    # print(result)
+        print(node)
     return result
 
+# def get_floorplans(path, output_dir):
+#     os.makedirs(output_dir, exist_ok=True)
+#     floors_in_order = []
+#     seen = set()
+#     for node in path:
+#         floor = node['floor']
+#         if floor not in seen:
+#             floors_in_order.append(floor)
+#             seen.add(floor)
+
+#     print("floors in order:")
+#     print(floors_in_order)
+
+#     floor_to_nodes = {}
+#     for node in path:
+#         floor = node['floor']
+#         if floor not in floor_to_nodes:
+#             floor_to_nodes[floor] = []
+#         floor_to_nodes[floor].append(node)
+
+#     output_paths = []
+
+#     # get the last floor in the path
+#     last_floor = path[-1]['floor']
+
+#     for floor in floors_in_order:
+#         nodes = floor_to_nodes.get(floor, [])
+        
+#         # skip drawing if there's only one point on this floor and it's not the last floor
+#         if len(nodes) == 1 and floor != last_floor:
+#             continue
+
+#         input_png_path = os.path.join('png_floorplans', f"f{floor[0]}.png")
+#         img = Image.open(input_png_path)
+#         draw = ImageDraw.Draw(img)
+
+#         # draw the lines
+#         if len(nodes) >= 2:
+#             for i in range(len(nodes) - 1):
+#                 x1, y1 = nodes[i]['x'], nodes[i]['y']
+#                 x2, y2 = nodes[i + 1]['x'], nodes[i + 1]['y']
+#                 draw.line((x1, y1, x2, y2), fill='#48AEE2', width=20)
+
+#         # draw other points
+#         radius = 8
+#         for node in nodes:
+#             x, y = node['x'], node['y']
+#             draw.ellipse((x - radius, y - radius, x + radius, y + radius), fill='#48AEE2')   
+
+#         # draw start and end
+#         if len(nodes) > 0:
+#             start_x, start_y = nodes[0]['x'], nodes[0]['y']
+#             end_x, end_y = nodes[-1]['x'], nodes[-1]['y']
+#             img.paste(start_icon_transparent, (start_x - 20, start_y - 20), start_icon_transparent)
+#             img.paste(end_icon_transparent, (end_x + 20, end_y + 20), end_icon_transparent)
+
+#         output_path = os.path.join(output_dir, f"{floor}-path.png")
+#         img.save(output_path)
+#         output_paths.append(output_path)
+
+#     return output_paths
+
+
+import os
+from PIL import Image, ImageDraw
+
 def get_floorplans(path, output_dir):
-    os.makedirs(output_dir, exist_ok=True)  # make sure the folder exists
-
-    floors_in_order = []
-    seen = set()
+    os.makedirs(output_dir, exist_ok=True)
+    
+    # Separate the path into segments based on floor changes
+    segments = []
+    current_segment = []
+    current_floor = None
 
     for node in path:
         floor = node['floor']
-        if floor not in seen:
-            floors_in_order.append(floor)
-            seen.add(floor)
+        if current_floor is None:
+            current_floor = floor
 
-    print("floors in order:")
-    print(floors_in_order)
+        if floor == current_floor:
+            current_segment.append(node)
+        else:
+            segments.append((current_floor, current_segment))
+            current_segment = [node]
+            current_floor = floor
 
-    floor_to_nodes = {}
-    for node in path:
-        floor = node['floor']
-        if floor not in floor_to_nodes:
-            floor_to_nodes[floor] = []
-        floor_to_nodes[floor].append(node)
+    # Add the last segment
+    if current_segment:
+        segments.append((current_floor, current_segment))
 
     output_paths = []
 
-    for floor in floors_in_order:
+    # Draw each segment independently
+    for idx, (floor, nodes) in enumerate(segments):
+        if len(nodes) == 1 and floor != path[-1]['floor']:
+            continue
+
         input_png_path = os.path.join('png_floorplans', f"f{floor[0]}.png")
         img = Image.open(input_png_path)
         draw = ImageDraw.Draw(img)
-        nodes = floor_to_nodes.get(floor, [])
-        # draw the line
+
+        # Draw the lines
         if len(nodes) >= 2:
             for i in range(len(nodes) - 1):
                 x1, y1 = nodes[i]['x'], nodes[i]['y']
                 x2, y2 = nodes[i + 1]['x'], nodes[i + 1]['y']
                 draw.line((x1, y1, x2, y2), fill='#48AEE2', width=20)
-        # draw other points
+
+        # Draw other points
         radius = 8
         for node in nodes:
             x, y = node['x'], node['y']
             draw.ellipse((x - radius, y - radius, x + radius, y + radius), fill='#48AEE2')   
-        # draw start and end icons
-        start_x, start_y = nodes[0]['x'], nodes[0]['y']
-        end_x, end_y = nodes[-1]['x'], nodes[-1]['y']
-        img.paste(start_icon_transparent, (start_x - 20, start_y - 20), start_icon_transparent)
-        img.paste(end_icon_transparent, (end_x + 20, end_y + 20), end_icon_transparent)
 
-        output_path = os.path.join(output_dir, f"{floor}-path.png")
+        # Draw start and end
+        if len(nodes) > 0:
+            start_x, start_y = nodes[0]['x'], nodes[0]['y']
+            end_x, end_y = nodes[-1]['x'], nodes[-1]['y']
+            img.paste(start_icon_transparent, (start_x - 20, start_y - 20), start_icon_transparent)
+            img.paste(end_icon_transparent, (end_x + 20, end_y + 20), end_icon_transparent)
+
+        # Use the index to differentiate multiple visits to the same floor
+        output_path = os.path.join(output_dir, f"{floor}-{idx}-path.png")
         img.save(output_path)
         output_paths.append(output_path)
 
     return output_paths
-
-def draw_arrow(draw, x1, y1, x2, y2, color='light blue', width=30, head_size=48):
-    draw.line((x1, y1, x2, y2), fill=color, width=width)
-
-    # Calculate direction vector
-    dx = x2 - x1
-    dy = y2 - y1
-    length = math.hypot(dx, dy)
-    if length == 0:
-        return  # avoid division by zero
-
-    # Normalize direction
-    udx = dx / length
-    udy = dy / length
-
-    # Arrowhead base position (a bit before the end)
-    base_x = x2 - udx * head_size
-    base_y = y2 - udy * head_size
-
-    # Perpendicular vectors for arrowhead wings
-    perp_x = -udy * head_size / 2
-    perp_y = udx * head_size / 2
-
-    # Triangle points
-    p1 = (x2, y2)
-    p2 = (base_x + perp_x, base_y + perp_y)
-    p3 = (base_x - perp_x, base_y - perp_y)
-
-    draw.polygon([p1, p2, p3], fill=color)
