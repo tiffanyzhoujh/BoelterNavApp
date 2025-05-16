@@ -62,18 +62,18 @@ _graph = build_weighted_graph(_coordinates, _edges, elevator_connections)
 
 
 # load the PNG icons 
-start_icon_path = os.path.join('assets', 'start.png')
-end_icon_path = os.path.join('assets', 'end.png')
+start_icon_path = os.path.join('assets', 'start_new.png')
+end_icon_path = os.path.join('assets', 'end_new.png')
 start_icon = Image.open(start_icon_path).convert('RGBA')
 end_icon = Image.open(end_icon_path).convert('RGBA')
-icon_size = (100, 50)
+icon_size = (200, 200)
 start_icon = start_icon.resize(icon_size, Image.Resampling.LANCZOS)
 end_icon = end_icon.resize(icon_size, Image.Resampling.LANCZOS)
 # opacity 80%
 start_icon_transparent = start_icon.copy()
 end_icon_transparent = end_icon.copy()
-start_icon_transparent.putalpha(230)
-end_icon_transparent.putalpha(230)
+# start_icon_transparent.putalpha(230)
+# end_icon_transparent.putalpha(230)
 
 
 
@@ -150,8 +150,8 @@ def get_floorplans(path, output_dir):
         if len(nodes) > 0:
             start_x, start_y = nodes[0]['x'], nodes[0]['y']
             end_x, end_y = nodes[-1]['x'], nodes[-1]['y']
-            img.paste(start_icon_transparent, (start_x - 20, start_y - 20), start_icon_transparent)
-            img.paste(end_icon_transparent, (end_x + 20, end_y + 20), end_icon_transparent)
+            img.paste(start_icon_transparent, (start_x, start_y - 180), start_icon_transparent)
+            img.paste(end_icon_transparent, (end_x, end_y - 180), end_icon_transparent)
 
         # differentiate multiple visits to the same floor
         output_path = os.path.join(output_dir, f"{floor}-{idx}-path.png")

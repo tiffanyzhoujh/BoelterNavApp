@@ -46,16 +46,6 @@ const props = defineProps({
   destination: String,
 })
 
-// function goToCompass() { // access to orientation of the device required
-//   router.push({
-//     name: 'Compass',
-//     query: {
-//       start: props.start,
-//       destination: props.destination,
-//     },
-//   })
-// }
-
 watch(() => [props.start, props.destination], fetchPath, { immediate: true })
 
 async function fetchPath() {
