@@ -31,42 +31,56 @@
 
 
 <script setup>
-import { ref, watch, computed } from 'vue'
+import { ref, watch, onMounted } from 'vue'
 import JSZip from 'jszip'
 import axios from 'axios'
 import roomMapping from '@/data/rooms.json'
-import { useRouter } from 'vue-router';
-const router = useRouter();
+import { useRoute } from 'vue-router';
+const route = useRoute()
 const imageSources = ref({})
 const floors = ref([])
 const activeFloor = ref(null)
 
-const props = defineProps({
-  start: String,
-  destination: String,
+// get query params
+const start = ref('')
+const destination = ref('')
+
+onMounted(() => {
+  start.value = route.query.start || ''
+  destination.value = route.query.destination || ''
+
+  if (start.value && destination.value) {
+    fetchPath()
+  }
 })
 
-watch(() => [props.start, props.destination], fetchPath, { immediate: true })
+watch(() => route.fullPath, () => {
+  start.value = route.query.start || ''
+  destination.value = route.query.destination || ''
+  if (start.value && destination.value) {
+    fetchPath()
+  }
+})
 
 async function fetchPath() {
-  const startDot = roomMapping[props.start]
+  const startDot = roomMapping[start.value]
   var destDot
 
   // special destination handling: find the nearest restroom
   var startLevel = startDot[0]
-  if (props.destination == "Restroom (W)") {
+  if (destination.value == "Restroom (W)") {
     var destLevel = startLevel
     if (startLevel == 1) {
       destLevel = 2
     }
     destDot = roomMapping["Restroom (Women, "+destLevel+"F)"]
-  } else if (props.destination == "Restroom (M)") {
+  } else if (destination.value == "Restroom (M)") {
     var destLevel = startLevel
     if (startLevel == 1) {
       destLevel = 2
     }
     destDot = roomMapping["Restroom (Men, "+destLevel+"F)"]
-  } else if (props.destination == "Restroom (All Gender)") {
+  } else if (destination.value == "Restroom (All Gender)") {
     // gender inclusive restroom on floor 5, 6, 8
     var destLevel = startLevel
     if (startLevel <= 5 ) {
@@ -77,14 +91,13 @@ async function fetchPath() {
     destDot = roomMapping["Restroom (Gender Inclusive, "+destLevel+"F)"]
   } else {
     // normal case
-    destDot = roomMapping[props.destination]
+    destDot = roomMapping[destination.value]
   }
 
   if (!startDot || !destDot || startDot === destDot) return
 
-
-  const res = await axios.post('https://boelterwayfinderbackend.onrender.com/api/path', {
-  // const res = await axios.post('http://192.168.1.96:5000/api/path', {  
+  // const res = await axios.post('https://boelterwayfinderbackend.onrender.com/api/path', {
+  const res = await axios.post('http://192.168.50.18:5000/api/path', {  
   start: startDot,
     dest: destDot
   }, { responseType: 'blob' }) 
@@ -98,11 +111,6 @@ async function fetchPath() {
     if (!file.dir && filename.endsWith('.png')) {
       const blob = await file.async('blob')
       const url = URL.createObjectURL(blob)
-
-      // const floor = filename.split('-')[0]
-      // newImageSources[floor] = url
-      // newFloors.push(floor)
-
       const [floor, index] = filename.split('-')
       const key = `${floor}-${index}`
       newImageSources[key] = url
@@ -112,7 +120,7 @@ async function fetchPath() {
   }
   imageSources.value = newImageSources
   floors.value = newFloors
-  activeFloor.value = newFloors[0]  // Set the first floor as active
+  activeFloor.value = newFloors[0]  // set the first floor as active
 }
 </script>
 
@@ -143,7 +151,6 @@ async function fetchPath() {
 .compass-button {
   position: absolute;
   right: 20px;
-  /* margin: 20px; */
   width: 40px;
   z-index: 1000;
   opacity: 0.9;

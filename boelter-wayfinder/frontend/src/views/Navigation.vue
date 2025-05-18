@@ -95,12 +95,23 @@
   })
 
   watch(
-  () => [route.query.start, route.query.destination],
-  ([newStart, newDest]) => {
-    start.value = newStart || ''
-    destination.value = newDest || ''
-  }
-)
+    () => [route.query.start, route.query.destination],
+    ([newStart, newDest]) => {
+      start.value = newStart || ''
+      destination.value = newDest || ''
+    }
+  )
+
+  watch([start, destination], ([newStart, newDestination]) => {
+    router.replace({
+      path: '/route',
+      query: {
+        start: newStart,
+        destination: newDestination
+      }
+    })
+  })
+
 </script>  
 
 <style scoped>
