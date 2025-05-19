@@ -1,32 +1,65 @@
 <template>
-  <div class="multi-floor-container">
-    <!-- Compass Icon -->
-    <v-btn icon class="elevation-0 compass-button">
-      <img src="@/assets/compass.svg" class="compass-icon"/>
-    </v-btn>
+  <!-- desktop view -->
+  <v-container v-if="mdAndUp">
+    <div class="multi-floor-container">
+      <!-- floor sidebar (hidden if only one floor exists) -->
+      <div class="sidebar">
+        <v-btn icon class="elevation-0">
+          <img src="@/assets/compass.svg" class="compass-icon"/>
+        </v-btn>
+        <v-btn 
+          icon
+          v-for="(floor, index) in floors"
+          :key="index"
+          class="elevation-1"
+          :color="activeFloor === floor ? '#48AEE2' : '#f1f5f8'"
+          @click="activeFloor = floor"
+        >
+          {{ floor.split('-')[0] }}
+        </v-btn>
+      </div>
 
-     <!-- Floor Sidebar (Hidden if only one floor exists) -->
-     <div v-if="floors.length > 1" class="sidebar">
-      <v-btn 
-        icon
-        v-for="(floor, index) in floors"
-        :key="index"
-        class="floor-button elevation-1"
-        :color="activeFloor === floor ? '#48AEE2' : '#f1f5f8'"
-        @click="activeFloor = floor"
-      >
-        {{ floor.split('-')[0] }}
+      <div class="floorplans">
+        <img
+          v-if="activeFloor && imageSources[activeFloor]"
+          :src="imageSources[activeFloor]"
+          class="floorplan-image-web"
+        />
+      </div>
+    </div>
+  </v-container>
+
+  <!-- mobile view -->
+   <v-container v-else>
+    <div class="multi-floor-container">
+      <!-- Compass Icon -->
+      <v-btn icon class="elevation-0 compass-button">
+        <img src="@/assets/compass.svg" class="compass-icon"/>
       </v-btn>
-    </div>
 
-    <div class="floorplans">
-      <img
-        v-if="activeFloor && imageSources[activeFloor]"
-        :src="imageSources[activeFloor]"
-        class="floorplan-image"
-      />
+      <!-- Floor Sidebar (Hidden if only one floor exists) -->
+      <div v-if="floors.length > 1" class="sidebar">
+        <v-btn 
+          icon
+          v-for="(floor, index) in floors"
+          :key="index"
+          class="floor-button elevation-1"
+          :color="activeFloor === floor ? '#48AEE2' : '#f1f5f8'"
+          @click="activeFloor = floor"
+        >
+          {{ floor.split('-')[0] }}
+        </v-btn>
+      </div>
+
+      <div class="floorplans">
+        <img
+          v-if="activeFloor && imageSources[activeFloor]"
+          :src="imageSources[activeFloor]"
+          class="floorplan-image"
+        />
+      </div>
     </div>
-  </div>
+  </v-container>
 </template>
 
 
@@ -172,4 +205,9 @@ async function fetchPath() {
   min-width: 100px;
   /* opacity: 0.9; */
 }
+
+.floorplan-image-web {
+  height: 600px;
+}
+
 </style>
