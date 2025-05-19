@@ -62,7 +62,7 @@ _graph = build_weighted_graph(_coordinates, _edges, elevator_connections)
 
 
 # load the PNG icons 
-start_icon_path = os.path.join('assets', 'start_new.png')
+start_icon_path = os.path.join('assets', 'start_flip.png')
 end_icon_path = os.path.join('assets', 'end_new.png')
 start_icon = Image.open(start_icon_path).convert('RGBA')
 end_icon = Image.open(end_icon_path).convert('RGBA')
@@ -150,7 +150,7 @@ def get_floorplans(path, output_dir):
         if len(nodes) > 0:
             start_x, start_y = nodes[0]['x'], nodes[0]['y']
             end_x, end_y = nodes[-1]['x'], nodes[-1]['y']
-            img.paste(start_icon_transparent, (start_x, start_y - 180), start_icon_transparent)
+            img.paste(start_icon_transparent, (start_x-180, start_y - 180), start_icon_transparent)
             img.paste(end_icon_transparent, (end_x, end_y - 180), end_icon_transparent)
 
         # differentiate multiple visits to the same floor

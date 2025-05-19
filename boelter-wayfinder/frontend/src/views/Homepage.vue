@@ -108,7 +108,7 @@
     '3400',
     'Restroom (W)', 
     'Restroom (M)',
-    'Restroom (All Gender)', 
+    'Restroom (Gender Inclusive)', 
     '5440',
     'SEAS Cafe'
   ]
