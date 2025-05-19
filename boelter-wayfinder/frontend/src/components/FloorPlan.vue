@@ -36,6 +36,9 @@ import JSZip from 'jszip'
 import axios from 'axios'
 import roomMapping from '@/data/rooms.json'
 import { useRoute } from 'vue-router';
+import { useDisplay } from 'vuetify'
+const { mdAndUp } = useDisplay() // > 960px
+
 const route = useRoute()
 const imageSources = ref({})
 const floors = ref([])
@@ -96,8 +99,8 @@ async function fetchPath() {
 
   if (!startDot || !destDot || startDot === destDot) return
 
-  // const res = await axios.post('https://boelterwayfinderbackend.onrender.com/api/path', {
-  const res = await axios.post('http://192.168.50.18:5000/api/path', {  
+  const res = await axios.post('https://boelterwayfinderbackend.onrender.com/api/path', {
+  // const res = await axios.post('http://192.168.50.18:5000/api/path', {  
   start: startDot,
     dest: destDot
   }, { responseType: 'blob' }) 
