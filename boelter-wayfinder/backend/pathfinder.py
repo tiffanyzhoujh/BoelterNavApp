@@ -106,6 +106,7 @@ def find_path(start, end):
             "y": y,
             "floor": floor
         })
+        # print(path)
     return result
 
 def find_nearest_restroom(start, candidates):
@@ -200,7 +201,11 @@ def get_floorplans(path, output_dir):
 
     # draw each segment independently
     for idx, (floor, nodes) in enumerate(segments):
-        if len(nodes) == 1 and floor != path[-1]['floor']:
+
+        # skip intermediate floors that contain only elevator stops
+        # unless the single node is the final destination
+        # if len(nodes) == 1 and floor != path[-1]['floor']: 
+        if len(nodes) == 1 and nodes[0]['name'] != path[-1]['name']:
             continue
 
         input_png_path = os.path.join('png_floorplans', f"f{floor[0]}.png")
