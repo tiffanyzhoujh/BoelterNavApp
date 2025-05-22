@@ -104,27 +104,10 @@ async function fetchPath() {
 
   // special destination handling: find the nearest restroom
   var startLevel = startDot[0]
-  if (destination.value == "Restroom (W)") {
-    var destLevel = startLevel
-    if (startLevel == 1) {
-      destLevel = 2
-    }
-    destDot = roomMapping["Restroom (Women, "+destLevel+"F)"]
-  } else if (destination.value == "Restroom (M)") {
-    var destLevel = startLevel
-    if (startLevel == 1) {
-      destLevel = 2
-    }
-    destDot = roomMapping["Restroom (Men, "+destLevel+"F)"]
-  } else if (destination.value == "Restroom (All Gender)") {
-    // gender inclusive restroom on floor 5, 6, 8
-    var destLevel = startLevel
-    if (startLevel <= 5 ) {
-      destLevel = 5
-    } else if (startLevel == 7 || startLevel == 9) {
-      destLevel = 8
-    }
-    destDot = roomMapping["Restroom (Gender Inclusive, "+destLevel+"F)"]
+  if (destination.value == "Nearest Restroom (W)" || 
+    destination.value == "Nearest Restroom (M)" || 
+    destination.value == "Nearest Restroom (Gender Inclusive)") {
+    destDot = destination.value
   } else {
     // normal case
     destDot = roomMapping[destination.value]
@@ -132,9 +115,9 @@ async function fetchPath() {
 
   if (!startDot || !destDot || startDot === destDot) return
 
-  const res = await axios.post('https://boelterwayfinderbackend.onrender.com/api/path', {
-  // const res = await axios.post('http://192.168.50.18:5000/api/path', {  
-  start: startDot,
+  // const res = await axios.post('https://boelterwayfinderbackend.onrender.com/api/path', {
+  const res = await axios.post('http://172.20.10.2:5000/api/path', {  
+    start: startDot,
     dest: destDot
   }, { responseType: 'blob' }) 
   // result is a zip of floorplan pictures

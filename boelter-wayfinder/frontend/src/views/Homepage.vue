@@ -106,9 +106,9 @@
     '8500', 
     '8251',
     '3400',
-    'Restroom (W)', 
-    'Restroom (M)',
-    'Restroom (Gender Inclusive)', 
+    'Nearest Restroom (W)', 
+    'Nearest Restroom (M)',
+    'Nearest Restroom (Gender Inclusive)', 
     '5440',
     'SEAS Cafe'
   ]

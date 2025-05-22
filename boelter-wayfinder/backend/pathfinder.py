@@ -60,6 +60,25 @@ _coordinates = load_coordinates(coord_files)
 _edges = load_edges(edge_files)
 _graph = build_weighted_graph(_coordinates, _edges, elevator_connections)
 
+restrooms_women = {"1": ["1f-8"],
+                    "2": ["2f-19"] ,
+                    "3": ["3f-13","3f-41"],
+                    "4": ["4f-159","4f-74"],
+                    "5": ["5f-6","5f-24"],
+                    "6": ["6f-18"],
+                    "7": ["7f-14","7f-59"],
+                    "9": ["9f-5"] }
+restrooms_men = {  "1": ["1f-20"],
+                    "2": ["2f-3"] ,
+                    "3": ["3f-26","3f-55"],
+                    "4": ["4f-9","4f-36"],
+                    "5": ["5f-63"],
+                    "6": ["6f-6", "6f-54"],
+                    "7": ["7f-5","7f-35"],
+                    "9": ["9f-12"] }
+restrooms_allgen = {"5": ["5f-34"],
+                    "6": ["6f-33"],
+                    "8": ["8f-24"] }
 
 # load the PNG icons 
 start_icon_path = os.path.join('assets', 'start_flip.png')
@@ -72,18 +91,10 @@ end_icon = end_icon.resize(icon_size, Image.Resampling.LANCZOS)
 # opacity 80%
 start_icon_transparent = start_icon.copy()
 end_icon_transparent = end_icon.copy()
-# start_icon_transparent.putalpha(230)
-# end_icon_transparent.putalpha(230)
 
-
-
-def get_shortest_path(start, end):
-    if start not in _graph.nodes or end not in _graph.nodes:
-        raise ValueError("Invalid start or destination node.")
-
+def find_path(start, end):
     path = nx.shortest_path(_graph, source=start, target=end, weight="weight")
     result = []
-    # print("shortest path result:")
     for node in path:
         if node not in _coordinates:
             continue
@@ -95,8 +106,71 @@ def get_shortest_path(start, end):
             "y": y,
             "floor": floor
         })
-        # print(node)
     return result
+
+def find_nearest_restroom(start, candidates):
+    # return the nearest destination in the list of candidates
+    nearest = None
+    min_distance = float('inf')
+
+    for candidate in candidates:
+        if candidate not in _graph.nodes:
+            continue
+        try:
+            path_length = nx.shortest_path_length(_graph, source=start, target=candidate, weight='weight')
+            if path_length < min_distance:
+                min_distance = path_length
+                nearest = candidate
+        except nx.NetworkXNoPath:
+            continue
+
+    if nearest is None:
+        raise ValueError("No reachable restroom found from start.")
+    return nearest
+
+def get_shortest_path(start, end):
+    if (start not in _graph.nodes or end not in _graph.nodes) and (end not in ["Nearest Restroom (W)", "Nearest Restroom (M)", "Nearest Restroom (Gender Inclusive)"]):
+        raise ValueError("Invalid start or destination node.")
+
+    # special case: nearest restroom search
+    start_floor = start[0]
+    if (end == "Nearest Restroom (W)"):
+        # if start is on floor 1, 2, 6, 9, just one solution
+        # if start is on floor 3, 4, 5, 7, two solutions
+        # if start is on floor 8, look for solution in 7 and 9
+        if start_floor in ["1", "2", "6", "9"]:
+            end = restrooms_women[start_floor][0]
+        elif start_floor in ["3", "4", "5", "7"]: 
+            candidates = restrooms_women[start_floor]
+            end = find_nearest_restroom(start, candidates)
+        else: 
+            candidates = restrooms_women["7"] + restrooms_women["9"]
+            end = find_nearest_restroom(start, candidates)
+    elif (end == "Nearest Restroom (M)"):
+        # if start is on floor 1, 2, 5, 9, just one solution
+        # if start is on floor 3, 4, 6, 7, two solutions
+        # if start is on floor 8, look for solution in 7 and 9
+        if start_floor in ["1", "2", "5", "9"]:
+            end = restrooms_men[start_floor][0]
+        elif start_floor in ["3", "4", "6", "7"]: 
+            candidates = restrooms_men[start_floor]
+            end = find_nearest_restroom(start, candidates)
+        else: 
+            candidates = restrooms_men["7"] + restrooms_men["9"]
+            end = find_nearest_restroom(start, candidates)
+    elif (end == "Nearest Restroom (Gender Inclusive)"): # on floor 5, 6, 8
+        if start_floor in ["1","2","3","4","5"]:
+            end = restrooms_allgen["5"][0]
+        elif start_floor in ["6"]:
+            end = restrooms_allgen["6"][0]
+        elif start_floor in ["8","9"]:
+            end = restrooms_allgen["8"][0]
+        else: # floor 7
+            candidates = restrooms_allgen["6"]+restrooms_allgen["8"]
+            end = find_nearest_restroom(start, candidates)
+
+    # normal shortest path search
+    return find_path(start, end)
 
 def get_floorplans(path, output_dir):
     os.makedirs(output_dir, exist_ok=True)
