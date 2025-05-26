@@ -81,16 +81,21 @@ restrooms_allgen = {"5": ["5f-34"],
                     "8": ["8f-24"] }
 
 # load the PNG icons 
-start_icon_path = os.path.join('assets', 'start_flip.png')
-end_icon_path = os.path.join('assets', 'end_new.png')
-start_icon = Image.open(start_icon_path).convert('RGBA')
-end_icon = Image.open(end_icon_path).convert('RGBA')
+start_icon_path_left = os.path.join('assets', 'start_left.png')
+start_icon_path_right = os.path.join('assets', 'start_right.png')
+end_icon_path_left = os.path.join('assets', 'end_left.png')
+end_icon_path_right = os.path.join('assets', 'end_right.png')
+start_icon_left = Image.open(start_icon_path_left).convert('RGBA')
+start_icon_right = Image.open(start_icon_path_right).convert('RGBA')
+end_icon_left = Image.open(end_icon_path_left).convert('RGBA')
+end_icon_right = Image.open(end_icon_path_right).convert('RGBA')
+
 icon_size = (200, 200)
-start_icon = start_icon.resize(icon_size, Image.Resampling.LANCZOS)
-end_icon = end_icon.resize(icon_size, Image.Resampling.LANCZOS)
-# opacity 80%
-start_icon_transparent = start_icon.copy()
-end_icon_transparent = end_icon.copy()
+start_icon_left = start_icon_left.resize(icon_size, Image.Resampling.LANCZOS)
+end_icon_left = end_icon_left.resize(icon_size, Image.Resampling.LANCZOS)
+start_icon_right = start_icon_right.resize(icon_size, Image.Resampling.LANCZOS)
+end_icon_right = end_icon_right.resize(icon_size, Image.Resampling.LANCZOS)
+
 
 def find_path(start, end):
     path = nx.shortest_path(_graph, source=start, target=end, weight="weight")
@@ -229,8 +234,12 @@ def get_floorplans(path, output_dir):
         if len(nodes) > 0:
             start_x, start_y = nodes[0]['x'], nodes[0]['y']
             end_x, end_y = nodes[-1]['x'], nodes[-1]['y']
-            img.paste(start_icon_transparent, (start_x-180, start_y - 180), start_icon_transparent)
-            img.paste(end_icon_transparent, (end_x, end_y - 180), end_icon_transparent)
+            if start_x <= end_x:
+                img.paste(start_icon_left, (start_x-180, start_y-180), start_icon_left)
+                img.paste(end_icon_right, (end_x, end_y-180), end_icon_right)
+            else:
+                img.paste(start_icon_right, (start_x, start_y-180), start_icon_right)
+                img.paste(end_icon_left, (end_x-180, end_y-180), end_icon_left)
 
         # differentiate multiple visits to the same floor
         output_path = os.path.join(output_dir, f"{floor}-{idx}-path.png")
