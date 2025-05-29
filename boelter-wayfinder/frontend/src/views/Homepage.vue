@@ -28,6 +28,7 @@
             outlined
             dense
             class="search-bar"
+            menu-icon=""
           />
          </div>
       
