@@ -99,18 +99,17 @@ watch(() => route.fullPath, () => {
 })
 
 async function fetchPath() {
-  const startDot = roomMapping[start.value]
+  const startDot = roomMapping[start.value].code
   var destDot
 
   // special destination handling: find the nearest restroom
-  var startLevel = startDot[0]
   if (destination.value == "Nearest Restroom (W)" || 
     destination.value == "Nearest Restroom (M)" || 
     destination.value == "Nearest Restroom (Gender Inclusive)") {
     destDot = destination.value
   } else {
     // normal case
-    destDot = roomMapping[destination.value]
+    destDot = roomMapping[destination.value].code
   }
 
   if (!startDot || !destDot || startDot === destDot) return

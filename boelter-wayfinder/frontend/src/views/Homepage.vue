@@ -51,17 +51,51 @@
         </div>
 
         <!-- search bar -->
-        <v-autocomplete
-        v-model="destination"
-        :items="destinationOptions"
-        item-title="label"
-        item-value="value"
-        prepend-inner-icon="mdi-magnify"
-        placeholder="Where do you want to go?"
-        outlined
-        dense
-        class="search-bar"
-        />
+         <div class="mobile-input">
+          <v-autocomplete
+            v-model="destination"
+            :items="destinationOptions"
+            item-title="label"
+            item-value="value"
+            prepend-inner-icon="mdi-magnify"
+            menu-icon=""
+            placeholder="Where do you want to go?"
+            outlined
+            dense
+            hide-details
+          />
+        </div>
+        <!-- filter -->
+        <div>
+          <v-btn 
+            class="elevation-0 pa-2 ml-3"
+            prepend-icon="mdi-filter"
+            dense
+            @click="dialog = true"
+          >
+          {{ filterLabel }}
+          </v-btn>
+        </div>
+        
+        <!-- dialog for filter selection -->
+        <v-dialog v-model="dialog" max-width="300">
+          <v-card>
+            <v-card-title class="text-h6">Filter Destinations</v-card-title>
+            <v-card-text>
+              <v-radio-group v-model="selectedCategory" column mandatory>
+                <v-radio label="No Filter" value="none" />
+                <v-radio label="Restrooms" value="restroom" />
+                <v-radio label="Exits" value="exit" />
+                <v-radio label="Elevators" value="elevator" />
+              </v-radio-group>
+            </v-card-text>
+            <v-card-actions>
+              <v-spacer />
+              <v-btn text @click="dialog = false">Close</v-btn>
+            </v-card-actions> 
+          </v-card>
+        </v-dialog>
+
         <!-- suggestions -->
         <div class="mt-4 text-left w-100">
         <div class="subtitle">Suggested Destinations</div>
@@ -85,22 +119,45 @@
 </template>
   
 <script setup>
-  import { ref, watch } from 'vue'
+  import { ref, watch, computed } from 'vue'
   import { useRouter } from 'vue-router'
   import rooms from '@/data/rooms.json'
   import '@mdi/font/css/materialdesignicons.css'
   import { useDisplay } from 'vuetify'
   const { mdAndUp } = useDisplay() // > 960px
-  
   const logo = new URL('@/assets/logo.svg', import.meta.url).href
-
-  const destination = ref(null)
-  const destinationOptions = Object.keys(rooms).map(key => ({
-    label: key,
-    value: key
-  }))
-
   const router = useRouter()
+
+  // filter field
+  const dialog = ref(false)
+  const selectedCategory = ref('none')
+  const filterLabel = computed(() => {
+  switch (selectedCategory.value) {
+      case 'restroom': return 'Restrooms'
+      case 'exit': return 'Exits'
+      case 'elevator': return 'Elevators'
+      default: return 'No Filter'
+    }
+  })
+
+
+  // input field 
+  const destination = ref(null)
+  const destinationOptions = computed(() => {
+    return Object.entries(rooms)
+      .filter(([name, info]) => {
+        // no filter applied, return all
+        if (selectedCategory.value === 'none') return true
+        // match the type
+        return info.type === selectedCategory.value
+      })
+      .map(([name]) => ({
+        label: name,
+        value: name
+      }))
+  })
+
+  // suggestion field
   const suggestions = [
     'Engineering Library', 
     '8500', 
@@ -158,6 +215,13 @@
 }
 .title-text-web {
   font-size: 50px;
+}
+
+.mobile-input{
+  width:100%;
+  display: flex;
+  flex-direction: row;
+  align-items:center;
 }
 
 </style>

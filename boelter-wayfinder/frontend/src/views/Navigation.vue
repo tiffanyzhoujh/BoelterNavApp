@@ -149,9 +149,9 @@
   const route = useRoute()
   const destination = ref('')
   const start = ref('')
-  const roomOptions = Object.keys(rooms).map(key => ({
-    label: key,
-    value: key
+  const roomOptions = Object.entries(rooms).map(([label, info]) => ({
+    label,
+    value: label, 
   }))
 
   const swapInputs = () => {

@@ -1,491 +1,1958 @@
-{   
-    "1536": "1f-1",
-    "1538": "1f-2",
-    "1542": "1f-3",
-    "1540": "1f-4",
-    "1541": "1f-5",
-    "1549": "1f-6",
-    "1550": "1f-7",
-    "Restroom (Women, 1F)": "1f-8",
-    "1555": "1f-9",
-    "Staircase (1F North)": "1f-10",
-    "Elevator (1F North)": "1f-11",
-    "1564": "1f-12",
-    "1561": "1f-13",
-    "1567": "1f-14",
-    "Exit (1F Northwest)": "1f-15",
-    "1564C": "1f-16",
-    "1805": "1f-17",
-    "1763": "1f-18",
-    "1762A": "1f-19",
-    "Restroom (Men, 1F)": "1f-20",
-    "1750": "1f-21",
-    "Elevator (1F South)": "1f-22",
-    "Staircase (1F South)": "1f-23",
-    "1678": "1f-24",
-    "Exit (1F Northeast, to Science Court)": "1f-25",
-    "2549": "2f-1",
-    "Staircase (2F Northwest)": "2f-2",
-    "Restroom (Men, 2F)": "2f-3",
-    "2555": "2f-4",
-    "Elevator (2F Northwest)": "2f-5",
-    "2564": "2f-6",
-    "2567": "2f-7",
-    "2568": "2f-8",
-    "2685": "2f-9",
-    "2805": "2f-10",
-    "2817": "2f-11",
-    "2821": "2f-12",
-    "2825": "2f-13",
-    "2760": "2f-14",
-    "2763": "2f-15",
-    "2761": "2f-16",
-    "Elevator (2F Southwest)": "2f-17",
-    "2756": "2f-18",
-    "Restroom (Women, 2F)": "2f-19",
-    "Staircase (2F Southwest)": "2f-20",
-    "2750 & 2740": "2f-21",
-    "2828": "2f-22",
-    "2808": "2f-23",
-    "2664 & 2684": "2f-24",
-    "2542": "2f-25",
-    "2541": "2f-26",
-    "2521": "2f-27",
-    "2522": "2f-28",
-    "2528": "2f-29",
-    "2518": "2f-30",
-    "2501ST": "2f-31",
-    "2517": "2f-32",
-    "2513": "2f-33",
-    "2510": "2f-34",
-    "2264": "2f-35",
-    "Elevator (2F Northeast)": "2f-36",
-    "Staircase (2F Northeast)": "2f-37",
-    "2265": "2f-38",
-    "2270": "2f-39",
-    "2274": "2f-40",
-    "2278": "2f-41",
-    "2292": "2f-42",
-    "2400": "2f-43",
-    "2408": "2f-44",
-    "2416": "2f-45",
-    "2422": "2f-46",
-    "2427": "2f-47",
-    "Staircase (2F Southeast)": "2f-48",
-    "2432": "2f-49",
-    "Elevator (2F Southeast)": "2f-50",
-    "2438": "2f-51",
-    "2444": "2f-52",
-    "2709": "2f-53",
-    "2711": "2f-54",
-    "2713": "2f-55",
-    "2714": "2f-56",
-    "2730": "2f-57",
-    "2745": "2f-58",
-    "Exit (2F Southwest)": "2f-59",
-    "Exit (2F Southeast)": "2f-60",
-    "3256N": "3f-1",
-    "3256A": "3f-2",
-    "3507": "3f-3",
-    "3506": "3f-4",
-    "3514": "3f-5",
-    "Exit (3F Northeast, to MS)": "3f-6",
-    "3528": "3f-7",
-    "3532": "3f-8",
-    "3531": "3f-9",
-    "3551": "3f-10",
-    "Staircase (3F Northwest)": "3f-11",
-    "3555": "3f-12",
-    "Restroom (Women, 3F North)": "3f-13",
-    "3559": "3f-14",
-    "Elevator (3F Northwest)": "3f-15",
-    "3562": "3f-16",
-    "3563": "3f-17",
-    "Exit (3F Northwest, to MS)": "3f-18",
-    "3815": "3f-19",
-    "3770": "3f-20",
-    "3771": "3f-21",
-    "3759": "3f-22",
-    "Elevator (3F Southwest)": "3f-23",
-    "3760": "3f-24",
-    "3756": "3f-25",
-    "Restroom (Men, 3F South)": "3f-26",
-    "Staircase (3F Southwest)": "3f-27",
-    "3750": "3f-28",
-    "3732": "3f-29",
-    "3731": "3f-30",
-    "3714": "3f-31",
-    "3713": "3f-32",
-    "3705": "3f-33",
-    "3704": "3f-34",
-    "3440": "3f-35",
-    "3436": "3f-36",
-    "Elevator (3F Southeast)": "3f-37",
-    "Staircase (3F Southeast)": "3f-38",
-    "3430": "3f-39",
-    "3428": "3f-40",
-    "Restroom (Women, 3F South)": "3f-41",
-    "3421": "3f-42",
-    "3417": "3f-43",
-    "3420": "3f-44",
-    "3413": "3f-45",
-    "3412": "3f-46",
-    "3409": "3f-47",
-    "3294": "3f-48",
-    "3400": "3f-49",
-    "3292": "3f-50",
-    "3285": "3f-51",
-    "3277": "3f-52",
-    "3286": "3f-53",
-    "3271": "3f-54",
-    "Restroom (Men, 3F North)": "3f-55",
-    "3276": "3f-56",
-    "3256S": "3f-57",
-    "Staircase (3F Northeast)": "3f-58",
-    "Elevator (3F Northeast)": "3f-59",
-    "3261": "3f-60",
-    "Exit (4F Northeast)": "4f-1",
-    "4251": "4f-2",
-    "4256": "4f-3",
-    "Elevator (4F Northeast)": "4f-5",
-    "4264": "4f-6",
-    "Staircase (4F Northeast)": "4f-7",
-    "4266": "4f-8",
-    "Restroom (Men, 4F North)": "4f-9",
-    "4273": "4f-10",
-    "4272": "4f-11",
-    "4274": "4f-12",
-    "4275": "4f-13",
-    "4280": "4f-14",
-    "4283": "4f-15",
-    "4403": "4f-16",
-    "4405": "4f-17",
-    "4404": "4f-18",
-    "4413": "4f-19",
-    "4417": "4f-20",
-    "4420": "4f-21",
-    "4421": "4f-22",
-    "Restroom (Women, 4F South)": "4f-159",
-    "4428": "4f-23",
-    "Staircase (4F Southeast)": "4f-24",
-    "4432": "4f-25",
-    "4436": "4f-26",
-    "Elevator (4F Southeast)": "4f-27",
-    "4440": "4f-28",
-    "4442": "4f-29",
-    "4707": "4f-30",
-    "4711": "4f-31",
-    "4729": "4f-32",
-    "4731": "4f-33",
-    "4732": "4f-34",
-    "4750": "4f-35",
-    "Restroom (Men, 4F South)": "4f-36",
-    "Staircase (4F Southwest)": "4f-37",
-    "4756": "4f-38",
-    "Elevator (4F Southwest)": "4f-39",
-    "4760": "4f-40",
-    "4837": "4f-41",
-    "4834": "4f-42",
-    "4832": "4f-43",
-    "4830": "4f-44",
-    "4826": "4f-45",
-    "4825": "4f-46",
-    "4820": "4f-47",
-    "4816": "4f-48",
-    "4817": "4f-49",
-    "4813": "4f-50",
-    "4809": "4f-51",
-    "4810": "4f-52",
-    "4806": "4f-53",
-    "4805": "4f-54",
-    "4803": "4f-55",
-    "4802": "4f-56",
-    "4686": "4f-57",
-    "4801": "4f-58",
-    "4685": "4f-59", 
-    "4684": "4f-60",
-    "4680": "4f-61",
-    "4677A": "4f-62",
-    "4677": "4f-63",
-    "4674": "4f-64",
-    "4670": "4f-160",
-    "4668": "4f-65",
-    "4664": "4f-66",
-    "4662": "4f-67",
-    "4667": "4f-68",
-    "4659": "4f-69",
-    "4658": "4f-70",
-    "Elevator (4F Northwest)": "4f-71",
-    "4655": "4f-72",
-    "4651": "4f-73",
-    "Restroom (Women, 4F North)": "4f-74",
-    "4557": "4f-75",
-    "Staircase (4F Northwest)": "4f-76",
-    "4549": "4f-77",
-    "4531": "4f-78",
-    "4532": "4f-79",
-    "4528": "4f-80",
-    "4515": "4f-81",
-    "4514": "4f-82",
-    "4506": "4f-83",
-    "4672": "4f-84",
-    "4818": "4f-85",
-    "Exit (5F Northwest, to MS)": "5f-1",
-    "Exit (5F Northeast, to MS)": "5f-2",
-    "Exit (5F Northeast, to Science Court)": "5f-3",
-    "Exit (5F Southeast, to Science Court)": "5f-4",
-    "Exit (5F Southwest, to E4)": "5f-5",
-    "Restroom (Women, 5F North)": "5f-6",
-    "5549": "5f-7",
-    "5531": "5f-8",
-    "5513": "5f-9",
-    "5249": "5f-10",
-    "5252": "5f-11",
-    "5264": "5f-12",
-    "5272": "5f-13",
-    "5280": "5f-14",
-    "5284": "5f-15",
-    "5288": "5f-16",
-    "5408": "5f-17",
-    "5412": "5f-18",
-    "5420": "5f-19",
-    "5422": "5f-20",
-    "5436": "5f-21",
-    "Elevator (5F Southeast)": "5f-22",
-    "Staircase (5F Southeast)": "5f-23",
-    "Restroom (Women, 5F South)": "5f-24",
-    "5421":"5f-25",
-    "5419": "5f-26",
-    "5409": "5f-27",
-    "5405": "5f-28",
-    "5403": "5f-29",
-    "5401": "5f-30",
-    "5289": "5f-31",
-    "5273": "5f-32",
-    "5271": "5f-33",
-    "Restroom (Gender Inclusive, 5F)": "5f-34",
-    "Staircase (5F Northeast)": "5f-35",
-    "Elevator (5F Northeast)": "5f-36",
-    "5506": "5f-37",
-    "5514": "5f-38",
-    "5532": "5f-39",
-    "SEAS Cafe": "5f-40",
-    "Staircase (5F Northwest)": "5f-41",
-    "Elevator (5F Northwest)": "5f-42",
-    "5662": "5f-43",
-    "5664": "5f-44",
-    "5668": "5f-45",
-    "5800": "5f-46",
-    "5802": "5f-47",
-    "5806": "5f-48",
-    "5824": "5f-49",
-    "5826": "5f-50",
-    "5832": "5f-51",
-    "5819": "5f-52",
-    "5818": "5f-53",
-    "5805": "5f-54",
-    "5801": "5f-55",
-    "5667": "5f-56",
-    "5651": "5f-57",
-    "Elevator (5F Southwest)": "5f-58",
-    "Staircase (5F Southwest)": "5f-59",
-    "5766": "5f-60",
-    "5764": "5f-61",
-    "5756": "5f-62",
-    "Restroom (Men, 5F South)": "5f-63",
-    "5750": "5f-64",
-    "5732": "5f-65",
-    "5714": "5f-66",
-    "5704": "5f-67",
-    "5440": "5f-68",
-    "5705": "5f-69",
-    "5713": "5f-70",
-    "5731": "5f-71",
-    "Exit (5F East, to Science Court)": "5f-126",
-    "Elevator (6F Northeast)": "6f-2",
-    "Staircase (6F Northeast)": "6f-3",
-    "6266": "6f-4",
-    "6270": "6f-5", 
-    "Restroom (Men, 6F Northeast)": "6f-6",
-    "6271": "6f-7",
-    "6275": "6f-8",
-    "6279": "6f-9",
-    "6288": "6f-11",
-    "6291": "6f-12",
-    "6408": "6f-13",
-    "6412": "6f-14",
-    "6415": "6f-15",
-    "6417": "6f-16",
-    "6421": "6f-17",
-    "Restroom (Women, 6F South)": "6f-18",
-    "6426": "6f-19",
-    "Staircase (6F Southeast)": "6f-20",
-    "Elevator (6F Southeast)": "6f-21",
-    "6704": "6f-22",
-    "6707": "6f-23",
-    "6713": "6f-24",
-    "6714": "6f-25",
-    "6722": "6f-26",
-    "6723": "6f-27",
-    "6726": "6f-28",
-    "6730": "6f-29",
-    "6729": "6f-30",
-    "6731": "6f-31",
-    "Staircase (6F Southwest)": "6f-32",
-    "Restroom (Gender Inclusive, 6F)": "6f-33",
-    "6756": "6f-34",
-    "Elevator (6F Southwest)": "6f-35",
-    "6764": "6f-36",
-    "6817": "6f-37",
-    "6818": "6f-38",
-    "6820": "6f-39",
-    "6763": "6f-40",
-    "6815": "6f-41",
-    "6807": "6f-42",
-    "6810": "6f-43",
-    "6802": "6f-44",
-    "6805": "6f-45",
-    "6689": "6f-46",
-    "6678": "6f-47",
-    "6679": "6f-48",
-    "6673": "6f-49",
-    "6672": "6f-50",
-    "Staircase (6F Northwest)": "6f-51",
-    "6549": "6f-52",
-    "6557": "6f-53",
-    "Restroom (Men, 6F Northwest)": "6f-54",
-    "6631": "6f-55",
-    "6564": "6f-56",
-    "Elevator (6F Northwest)": "6f-57",
-    "6541": "6f-58",
-    "6532": "6f-59",
-    "6528": "6f-60",
-    "6535": "6f-61",
-    "6531": "6f-62",
-    "6513": "6f-63",
-    "6514": "6f-64",
-    "6506": "6f-65",
-    "6505": "6f-66",
-    "6750":"6f-129",
-    "Exit (6F Northeast, to MS)": "6f-67",
-    "Exit (6F Southwest, to E4)": "6f-68",
-    "Exit (6F Northwest, to MS)": "6f-69",
-    "7256": "7f-1",
-    "Elevator (7F Northeast)": "7f-2",
-    "Staircase (7F Northeast)": "7f-3",
-    "7268": "7f-4",
-    "Restroom (Men, 7F North)": "7f-5",
-    "7276": "7f-7",
-    "7400": "7f-8",
-    "7408": "7f-9",
-    "7412": "7f-10",
-    "7420": "7f-11",
-    "Stack (7F)": "7f-12",
-    "7421": "7f-13",
-    "Restroom (Women, 7F South)": "7f-14",
-    "Staircase (7F Southeast)": "7f-16",
-    "Elevator (7F Southeast)": "7f-17",
-    "7440": "7f-18",
-    "7702": "7f-19",
-    "7707": "7f-20",
-    "7713": "7f-21",
-    "7714": "7f-22",
-    "7730": "7f-23",
-    "7717": "7f-24",
-    "7719": "7f-25",
-    "7729": "7f-26",
-    "7731": "7f-27",
-    "7732": "7f-28",
-    "7737": "7f-29",
-    "7736": "7f-30",
-    "7738": "7f-31",
-    "7745": "7f-32",
-    "7750": "7f-33",
-    "Staircase (7F Southwest)": "7f-34",
-    "Restroom (Men, 7F South)": "7f-35",
-    "7756": "7f-36",
-    "7764": "7f-37",
-    "Elevator (7F Southwest)": "7f-38",
-    "7763": "7f-39",
-    "7765": "7f-40",
-    "7818": "7f-41",
-    "7816": "7f-42",
-    "7813": "7f-43",
-    "7814": "7f-44",
-    "7804": "7f-45",
-    "7802": "7f-46",
-    "7801": "7f-47",
-    "7820": "7f-48",
-    "7681": "7f-49",
-    "7680": "7f-50",
-    "7678": "7f-51",
-    "7675": "7f-52",
-    "7673": "7f-53",
-    "7674": "7f-54",
-    "7672": "7f-55",
-    "Staircase (7F Northwest)": "7f-56",
-    "7564": "7f-57",
-    "7631": "7f-58",
-    "Restroom (Women, 7F North)": "7f-59",
-    "Elevator (7F Northwest)": "7f-60",
-    "7557": "7f-61",
-    "7549": "7f-62",
-    "7535": "7f-63",
-    "7538": "7f-64",
-    "7534": "7f-65",
-    "7530": "7f-66",
-    "7523": "7f-67",
-    "7528": "7f-68",
-    "7524": "7f-69",
-    "7520": "7f-70",
-    "7514": "7f-71",
-    "7513": "7f-72",
-    "7506": "7f-73",
-    "7503": "7f-74",
-    "Exit (7F Northeast, to MS)": "7f-75",
-    "Exit (7F Northwest, to MS)": "7f-76",
-    "8251": "8f-2",
-    "Elevator (8F Northeast)": "8f-3",
-    "Staircase (8F Northeast)": "8f-4",
-    "Engineering Library": "8f-5",
-    "Elevator (8F Stack)": "8f-6",
-    "Staircase (8F Stack, North)": "8f-7",
-    "Engineering Library Stack": "8f-8",
-    "8270E": "8f-9",
-    "8270X": "8f-10",
-    "8270J": "8f-11",
-    "8270H": "8f-12",
-    "8427": "8f-13",
-    "Staircase (8F Southeast)": "8f-14",
-    "Elevator (8F Southeast)": "8f-15",
-    "Reading Room": "8f-16",
-    "8438": "8f-17",
-    "Staircase (8F Southwest)": "8f-21",
-    "Elevator (8F Southwest)": "8f-22",
-    "8761": "8f-23",
-    "Restroom (Gender Inclusive, 8F)": "8f-24",
-    "Staircase (8F Northwest)": "8f-26",
-    "Elevator (8F Northwest)": "8f-25",
-    "8500": "8f-27",
-    "9258": "9f-1",
-    "9249": "9f-2",
-    "Elevator (9F North)": "9f-3",
-    "Staircase (9F North)": "9f-4",
-    "Restroom (Women, 9F)": "9f-5",
-    "9264": "9f-6",
-    "9275": "9f-7",
-    "9277": "9f-8",
-    "9401": "9f-9",
-    "9407": "9f-10",
-    "9413": "9f-11",
-    "Restroom (Men, 9F)": "9f-12",
-    "9435": "9f-13",
-    "Staircase (9F South)": "9f-43",
-    "9432": "9f-14",
-    "9434": "9f-15",
-    "9436": "9f-16",
-    "Elevator (9F South)": "9f-17",
-    "9410": "9f-18",
-    "9406": "9f-19",
-    "9404": "9f-20"
+{
+  "1536": {
+    "code": "1f-1",
+    "type": "default"
+  },
+  "1538": {
+    "code": "1f-2",
+    "type": "default"
+  },
+  "1542": {
+    "code": "1f-3",
+    "type": "default"
+  },
+  "1540": {
+    "code": "1f-4",
+    "type": "default"
+  },
+  "1541": {
+    "code": "1f-5",
+    "type": "default"
+  },
+  "1549": {
+    "code": "1f-6",
+    "type": "default"
+  },
+  "1550": {
+    "code": "1f-7",
+    "type": "default"
+  },
+  "Restroom (Women, 1F)": {
+    "code": "1f-8",
+    "type": "restroom"
+  },
+  "1555": {
+    "code": "1f-9",
+    "type": "default"
+  },
+  "Staircase (1F North)": {
+    "code": "1f-10",
+    "type": "default"
+  },
+  "Elevator (1F North)": {
+    "code": "1f-11",
+    "type": "elevator"
+  },
+  "1564": {
+    "code": "1f-12",
+    "type": "default"
+  },
+  "1561": {
+    "code": "1f-13",
+    "type": "default"
+  },
+  "1567": {
+    "code": "1f-14",
+    "type": "default"
+  },
+  "Exit (1F Northwest)": {
+    "code": "1f-15",
+    "type": "exit"
+  },
+  "1564C": {
+    "code": "1f-16",
+    "type": "default"
+  },
+  "1805": {
+    "code": "1f-17",
+    "type": "default"
+  },
+  "1763": {
+    "code": "1f-18",
+    "type": "default"
+  },
+  "1762A": {
+    "code": "1f-19",
+    "type": "default"
+  },
+  "Restroom (Men, 1F)": {
+    "code": "1f-20",
+    "type": "restroom"
+  },
+  "1750": {
+    "code": "1f-21",
+    "type": "default"
+  },
+  "Elevator (1F South)": {
+    "code": "1f-22",
+    "type": "elevator"
+  },
+  "Staircase (1F South)": {
+    "code": "1f-23",
+    "type": "default"
+  },
+  "1678": {
+    "code": "1f-24",
+    "type": "default"
+  },
+  "Exit (1F Northeast, to Science Court)": {
+    "code": "1f-25",
+    "type": "exit"
+  },
+  "2549": {
+    "code": "2f-1",
+    "type": "default"
+  },
+  "Staircase (2F Northwest)": {
+    "code": "2f-2",
+    "type": "default"
+  },
+  "Restroom (Men, 2F)": {
+    "code": "2f-3",
+    "type": "restroom"
+  },
+  "2555": {
+    "code": "2f-4",
+    "type": "default"
+  },
+  "Elevator (2F Northwest)": {
+    "code": "2f-5",
+    "type": "elevator"
+  },
+  "2564": {
+    "code": "2f-6",
+    "type": "default"
+  },
+  "2567": {
+    "code": "2f-7",
+    "type": "default"
+  },
+  "2568": {
+    "code": "2f-8",
+    "type": "default"
+  },
+  "2685": {
+    "code": "2f-9",
+    "type": "default"
+  },
+  "2805": {
+    "code": "2f-10",
+    "type": "default"
+  },
+  "2817": {
+    "code": "2f-11",
+    "type": "default"
+  },
+  "2821": {
+    "code": "2f-12",
+    "type": "default"
+  },
+  "2825": {
+    "code": "2f-13",
+    "type": "default"
+  },
+  "2760": {
+    "code": "2f-14",
+    "type": "default"
+  },
+  "2763": {
+    "code": "2f-15",
+    "type": "default"
+  },
+  "2761": {
+    "code": "2f-16",
+    "type": "default"
+  },
+  "Elevator (2F Southwest)": {
+    "code": "2f-17",
+    "type": "elevator"
+  },
+  "2756": {
+    "code": "2f-18",
+    "type": "default"
+  },
+  "Restroom (Women, 2F)": {
+    "code": "2f-19",
+    "type": "restroom"
+  },
+  "Staircase (2F Southwest)": {
+    "code": "2f-20",
+    "type": "default"
+  },
+  "2750 & 2740": {
+    "code": "2f-21",
+    "type": "default"
+  },
+  "2828": {
+    "code": "2f-22",
+    "type": "default"
+  },
+  "2808": {
+    "code": "2f-23",
+    "type": "default"
+  },
+  "2664 & 2684": {
+    "code": "2f-24",
+    "type": "default"
+  },
+  "2542": {
+    "code": "2f-25",
+    "type": "default"
+  },
+  "2541": {
+    "code": "2f-26",
+    "type": "default"
+  },
+  "2521": {
+    "code": "2f-27",
+    "type": "default"
+  },
+  "2522": {
+    "code": "2f-28",
+    "type": "default"
+  },
+  "2528": {
+    "code": "2f-29",
+    "type": "default"
+  },
+  "2518": {
+    "code": "2f-30",
+    "type": "default"
+  },
+  "2501ST": {
+    "code": "2f-31",
+    "type": "default"
+  },
+  "2517": {
+    "code": "2f-32",
+    "type": "default"
+  },
+  "2513": {
+    "code": "2f-33",
+    "type": "default"
+  },
+  "2510": {
+    "code": "2f-34",
+    "type": "default"
+  },
+  "2264": {
+    "code": "2f-35",
+    "type": "default"
+  },
+  "Elevator (2F Northeast)": {
+    "code": "2f-36",
+    "type": "elevator"
+  },
+  "Staircase (2F Northeast)": {
+    "code": "2f-37",
+    "type": "default"
+  },
+  "2265": {
+    "code": "2f-38",
+    "type": "default"
+  },
+  "2270": {
+    "code": "2f-39",
+    "type": "default"
+  },
+  "2274": {
+    "code": "2f-40",
+    "type": "default"
+  },
+  "2278": {
+    "code": "2f-41",
+    "type": "default"
+  },
+  "2292": {
+    "code": "2f-42",
+    "type": "default"
+  },
+  "2400": {
+    "code": "2f-43",
+    "type": "default"
+  },
+  "2408": {
+    "code": "2f-44",
+    "type": "default"
+  },
+  "2416": {
+    "code": "2f-45",
+    "type": "default"
+  },
+  "2422": {
+    "code": "2f-46",
+    "type": "default"
+  },
+  "2427": {
+    "code": "2f-47",
+    "type": "default"
+  },
+  "Staircase (2F Southeast)": {
+    "code": "2f-48",
+    "type": "default"
+  },
+  "2432": {
+    "code": "2f-49",
+    "type": "default"
+  },
+  "Elevator (2F Southeast)": {
+    "code": "2f-50",
+    "type": "elevator"
+  },
+  "2438": {
+    "code": "2f-51",
+    "type": "default"
+  },
+  "2444": {
+    "code": "2f-52",
+    "type": "default"
+  },
+  "2709": {
+    "code": "2f-53",
+    "type": "default"
+  },
+  "2711": {
+    "code": "2f-54",
+    "type": "default"
+  },
+  "2713": {
+    "code": "2f-55",
+    "type": "default"
+  },
+  "2714": {
+    "code": "2f-56",
+    "type": "default"
+  },
+  "2730": {
+    "code": "2f-57",
+    "type": "default"
+  },
+  "2745": {
+    "code": "2f-58",
+    "type": "default"
+  },
+  "Exit (2F Southwest)": {
+    "code": "2f-59",
+    "type": "exit"
+  },
+  "Exit (2F Southeast)": {
+    "code": "2f-60",
+    "type": "exit"
+  },
+  "3256N": {
+    "code": "3f-1",
+    "type": "default"
+  },
+  "3256A": {
+    "code": "3f-2",
+    "type": "default"
+  },
+  "3507": {
+    "code": "3f-3",
+    "type": "default"
+  },
+  "3506": {
+    "code": "3f-4",
+    "type": "default"
+  },
+  "3514": {
+    "code": "3f-5",
+    "type": "default"
+  },
+  "Exit (3F Northeast, to MS)": {
+    "code": "3f-6",
+    "type": "exit"
+  },
+  "3528": {
+    "code": "3f-7",
+    "type": "default"
+  },
+  "3532": {
+    "code": "3f-8",
+    "type": "default"
+  },
+  "3531": {
+    "code": "3f-9",
+    "type": "default"
+  },
+  "3551": {
+    "code": "3f-10",
+    "type": "default"
+  },
+  "Staircase (3F Northwest)": {
+    "code": "3f-11",
+    "type": "default"
+  },
+  "3555": {
+    "code": "3f-12",
+    "type": "default"
+  },
+  "Restroom (Women, 3F North)": {
+    "code": "3f-13",
+    "type": "restroom"
+  },
+  "3559": {
+    "code": "3f-14",
+    "type": "default"
+  },
+  "Elevator (3F Northwest)": {
+    "code": "3f-15",
+    "type": "elevator"
+  },
+  "3562": {
+    "code": "3f-16",
+    "type": "default"
+  },
+  "3563": {
+    "code": "3f-17",
+    "type": "default"
+  },
+  "Exit (3F Northwest, to MS)": {
+    "code": "3f-18",
+    "type": "exit"
+  },
+  "3815": {
+    "code": "3f-19",
+    "type": "default"
+  },
+  "3770": {
+    "code": "3f-20",
+    "type": "default"
+  },
+  "3771": {
+    "code": "3f-21",
+    "type": "default"
+  },
+  "3759": {
+    "code": "3f-22",
+    "type": "default"
+  },
+  "Elevator (3F Southwest)": {
+    "code": "3f-23",
+    "type": "elevator"
+  },
+  "3760": {
+    "code": "3f-24",
+    "type": "default"
+  },
+  "3756": {
+    "code": "3f-25",
+    "type": "default"
+  },
+  "Restroom (Men, 3F South)": {
+    "code": "3f-26",
+    "type": "restroom"
+  },
+  "Staircase (3F Southwest)": {
+    "code": "3f-27",
+    "type": "default"
+  },
+  "3750": {
+    "code": "3f-28",
+    "type": "default"
+  },
+  "3732": {
+    "code": "3f-29",
+    "type": "default"
+  },
+  "3731": {
+    "code": "3f-30",
+    "type": "default"
+  },
+  "3714": {
+    "code": "3f-31",
+    "type": "default"
+  },
+  "3713": {
+    "code": "3f-32",
+    "type": "default"
+  },
+  "3705": {
+    "code": "3f-33",
+    "type": "default"
+  },
+  "3704": {
+    "code": "3f-34",
+    "type": "default"
+  },
+  "3440": {
+    "code": "3f-35",
+    "type": "default"
+  },
+  "3436": {
+    "code": "3f-36",
+    "type": "default"
+  },
+  "Elevator (3F Southeast)": {
+    "code": "3f-37",
+    "type": "elevator"
+  },
+  "Staircase (3F Southeast)": {
+    "code": "3f-38",
+    "type": "default"
+  },
+  "3430": {
+    "code": "3f-39",
+    "type": "default"
+  },
+  "3428": {
+    "code": "3f-40",
+    "type": "default"
+  },
+  "Restroom (Women, 3F South)": {
+    "code": "3f-41",
+    "type": "restroom"
+  },
+  "3421": {
+    "code": "3f-42",
+    "type": "default"
+  },
+  "3417": {
+    "code": "3f-43",
+    "type": "default"
+  },
+  "3420": {
+    "code": "3f-44",
+    "type": "default"
+  },
+  "3413": {
+    "code": "3f-45",
+    "type": "default"
+  },
+  "3412": {
+    "code": "3f-46",
+    "type": "default"
+  },
+  "3409": {
+    "code": "3f-47",
+    "type": "default"
+  },
+  "3294": {
+    "code": "3f-48",
+    "type": "default"
+  },
+  "3400": {
+    "code": "3f-49",
+    "type": "default"
+  },
+  "3292": {
+    "code": "3f-50",
+    "type": "default"
+  },
+  "3285": {
+    "code": "3f-51",
+    "type": "default"
+  },
+  "3277": {
+    "code": "3f-52",
+    "type": "default"
+  },
+  "3286": {
+    "code": "3f-53",
+    "type": "default"
+  },
+  "3271": {
+    "code": "3f-54",
+    "type": "default"
+  },
+  "Restroom (Men, 3F North)": {
+    "code": "3f-55",
+    "type": "restroom"
+  },
+  "3276": {
+    "code": "3f-56",
+    "type": "default"
+  },
+  "3256S": {
+    "code": "3f-57",
+    "type": "default"
+  },
+  "Staircase (3F Northeast)": {
+    "code": "3f-58",
+    "type": "default"
+  },
+  "Elevator (3F Northeast)": {
+    "code": "3f-59",
+    "type": "elevator"
+  },
+  "3261": {
+    "code": "3f-60",
+    "type": "default"
+  },
+  "Exit (4F Northeast)": {
+    "code": "4f-1",
+    "type": "exit"
+  },
+  "4251": {
+    "code": "4f-2",
+    "type": "default"
+  },
+  "4256": {
+    "code": "4f-3",
+    "type": "default"
+  },
+  "Elevator (4F Northeast)": {
+    "code": "4f-5",
+    "type": "elevator"
+  },
+  "4264": {
+    "code": "4f-6",
+    "type": "default"
+  },
+  "Staircase (4F Northeast)": {
+    "code": "4f-7",
+    "type": "default"
+  },
+  "4266": {
+    "code": "4f-8",
+    "type": "default"
+  },
+  "Restroom (Men, 4F North)": {
+    "code": "4f-9",
+    "type": "restroom"
+  },
+  "4273": {
+    "code": "4f-10",
+    "type": "default"
+  },
+  "4272": {
+    "code": "4f-11",
+    "type": "default"
+  },
+  "4274": {
+    "code": "4f-12",
+    "type": "default"
+  },
+  "4275": {
+    "code": "4f-13",
+    "type": "default"
+  },
+  "4280": {
+    "code": "4f-14",
+    "type": "default"
+  },
+  "4283": {
+    "code": "4f-15",
+    "type": "default"
+  },
+  "4403": {
+    "code": "4f-16",
+    "type": "default"
+  },
+  "4405": {
+    "code": "4f-17",
+    "type": "default"
+  },
+  "4404": {
+    "code": "4f-18",
+    "type": "default"
+  },
+  "4413": {
+    "code": "4f-19",
+    "type": "default"
+  },
+  "4417": {
+    "code": "4f-20",
+    "type": "default"
+  },
+  "4420": {
+    "code": "4f-21",
+    "type": "default"
+  },
+  "4421": {
+    "code": "4f-22",
+    "type": "default"
+  },
+  "Restroom (Women, 4F South)": {
+    "code": "4f-159",
+    "type": "restroom"
+  },
+  "4428": {
+    "code": "4f-23",
+    "type": "default"
+  },
+  "Staircase (4F Southeast)": {
+    "code": "4f-24",
+    "type": "default"
+  },
+  "4432": {
+    "code": "4f-25",
+    "type": "default"
+  },
+  "4436": {
+    "code": "4f-26",
+    "type": "default"
+  },
+  "Elevator (4F Southeast)": {
+    "code": "4f-27",
+    "type": "elevator"
+  },
+  "4440": {
+    "code": "4f-28",
+    "type": "default"
+  },
+  "4442": {
+    "code": "4f-29",
+    "type": "default"
+  },
+  "4707": {
+    "code": "4f-30",
+    "type": "default"
+  },
+  "4711": {
+    "code": "4f-31",
+    "type": "default"
+  },
+  "4729": {
+    "code": "4f-32",
+    "type": "default"
+  },
+  "4731": {
+    "code": "4f-33",
+    "type": "default"
+  },
+  "4732": {
+    "code": "4f-34",
+    "type": "default"
+  },
+  "4750": {
+    "code": "4f-35",
+    "type": "default"
+  },
+  "Restroom (Men, 4F South)": {
+    "code": "4f-36",
+    "type": "restroom"
+  },
+  "Staircase (4F Southwest)": {
+    "code": "4f-37",
+    "type": "default"
+  },
+  "4756": {
+    "code": "4f-38",
+    "type": "default"
+  },
+  "Elevator (4F Southwest)": {
+    "code": "4f-39",
+    "type": "elevator"
+  },
+  "4760": {
+    "code": "4f-40",
+    "type": "default"
+  },
+  "4837": {
+    "code": "4f-41",
+    "type": "default"
+  },
+  "4834": {
+    "code": "4f-42",
+    "type": "default"
+  },
+  "4832": {
+    "code": "4f-43",
+    "type": "default"
+  },
+  "4830": {
+    "code": "4f-44",
+    "type": "default"
+  },
+  "4826": {
+    "code": "4f-45",
+    "type": "default"
+  },
+  "4825": {
+    "code": "4f-46",
+    "type": "default"
+  },
+  "4820": {
+    "code": "4f-47",
+    "type": "default"
+  },
+  "4816": {
+    "code": "4f-48",
+    "type": "default"
+  },
+  "4817": {
+    "code": "4f-49",
+    "type": "default"
+  },
+  "4813": {
+    "code": "4f-50",
+    "type": "default"
+  },
+  "4809": {
+    "code": "4f-51",
+    "type": "default"
+  },
+  "4810": {
+    "code": "4f-52",
+    "type": "default"
+  },
+  "4806": {
+    "code": "4f-53",
+    "type": "default"
+  },
+  "4805": {
+    "code": "4f-54",
+    "type": "default"
+  },
+  "4803": {
+    "code": "4f-55",
+    "type": "default"
+  },
+  "4802": {
+    "code": "4f-56",
+    "type": "default"
+  },
+  "4686": {
+    "code": "4f-57",
+    "type": "default"
+  },
+  "4801": {
+    "code": "4f-58",
+    "type": "default"
+  },
+  "4685": {
+    "code": "4f-59",
+    "type": "default"
+  },
+  "4684": {
+    "code": "4f-60",
+    "type": "default"
+  },
+  "4680": {
+    "code": "4f-61",
+    "type": "default"
+  },
+  "4677A": {
+    "code": "4f-62",
+    "type": "default"
+  },
+  "4677": {
+    "code": "4f-63",
+    "type": "default"
+  },
+  "4674": {
+    "code": "4f-64",
+    "type": "default"
+  },
+  "4670": {
+    "code": "4f-160",
+    "type": "default"
+  },
+  "4668": {
+    "code": "4f-65",
+    "type": "default"
+  },
+  "4664": {
+    "code": "4f-66",
+    "type": "default"
+  },
+  "4662": {
+    "code": "4f-67",
+    "type": "default"
+  },
+  "4667": {
+    "code": "4f-68",
+    "type": "default"
+  },
+  "4659": {
+    "code": "4f-69",
+    "type": "default"
+  },
+  "4658": {
+    "code": "4f-70",
+    "type": "default"
+  },
+  "Elevator (4F Northwest)": {
+    "code": "4f-71",
+    "type": "elevator"
+  },
+  "4655": {
+    "code": "4f-72",
+    "type": "default"
+  },
+  "4651": {
+    "code": "4f-73",
+    "type": "default"
+  },
+  "Restroom (Women, 4F North)": {
+    "code": "4f-74",
+    "type": "restroom"
+  },
+  "4557": {
+    "code": "4f-75",
+    "type": "default"
+  },
+  "Staircase (4F Northwest)": {
+    "code": "4f-76",
+    "type": "default"
+  },
+  "4549": {
+    "code": "4f-77",
+    "type": "default"
+  },
+  "4531": {
+    "code": "4f-78",
+    "type": "default"
+  },
+  "4532": {
+    "code": "4f-79",
+    "type": "default"
+  },
+  "4528": {
+    "code": "4f-80",
+    "type": "default"
+  },
+  "4515": {
+    "code": "4f-81",
+    "type": "default"
+  },
+  "4514": {
+    "code": "4f-82",
+    "type": "default"
+  },
+  "4506": {
+    "code": "4f-83",
+    "type": "default"
+  },
+  "4672": {
+    "code": "4f-84",
+    "type": "default"
+  },
+  "4818": {
+    "code": "4f-85",
+    "type": "default"
+  },
+  "Exit (5F Northwest, to MS)": {
+    "code": "5f-1",
+    "type": "exit"
+  },
+  "Exit (5F Northeast, to MS)": {
+    "code": "5f-2",
+    "type": "exit"
+  },
+  "Exit (5F Northeast, to Science Court)": {
+    "code": "5f-3",
+    "type": "exit"
+  },
+  "Exit (5F Southeast, to Science Court)": {
+    "code": "5f-4",
+    "type": "exit"
+  },
+  "Exit (5F Southwest, to E4)": {
+    "code": "5f-5",
+    "type": "exit"
+  },
+  "Restroom (Women, 5F North)": {
+    "code": "5f-6",
+    "type": "restroom"
+  },
+  "5549": {
+    "code": "5f-7",
+    "type": "default"
+  },
+  "5531": {
+    "code": "5f-8",
+    "type": "default"
+  },
+  "5513": {
+    "code": "5f-9",
+    "type": "default"
+  },
+  "5249": {
+    "code": "5f-10",
+    "type": "default"
+  },
+  "5252": {
+    "code": "5f-11",
+    "type": "default"
+  },
+  "5264": {
+    "code": "5f-12",
+    "type": "default"
+  },
+  "5272": {
+    "code": "5f-13",
+    "type": "default"
+  },
+  "5280": {
+    "code": "5f-14",
+    "type": "default"
+  },
+  "5284": {
+    "code": "5f-15",
+    "type": "default"
+  },
+  "5288": {
+    "code": "5f-16",
+    "type": "default"
+  },
+  "5408": {
+    "code": "5f-17",
+    "type": "default"
+  },
+  "5412": {
+    "code": "5f-18",
+    "type": "default"
+  },
+  "5420": {
+    "code": "5f-19",
+    "type": "default"
+  },
+  "5422": {
+    "code": "5f-20",
+    "type": "default"
+  },
+  "5436": {
+    "code": "5f-21",
+    "type": "default"
+  },
+  "Elevator (5F Southeast)": {
+    "code": "5f-22",
+    "type": "elevator"
+  },
+  "Staircase (5F Southeast)": {
+    "code": "5f-23",
+    "type": "default"
+  },
+  "Restroom (Women, 5F South)": {
+    "code": "5f-24",
+    "type": "restroom"
+  },
+  "5421": {
+    "code": "5f-25",
+    "type": "default"
+  },
+  "5419": {
+    "code": "5f-26",
+    "type": "default"
+  },
+  "5409": {
+    "code": "5f-27",
+    "type": "default"
+  },
+  "5405": {
+    "code": "5f-28",
+    "type": "default"
+  },
+  "5403": {
+    "code": "5f-29",
+    "type": "default"
+  },
+  "5401": {
+    "code": "5f-30",
+    "type": "default"
+  },
+  "5289": {
+    "code": "5f-31",
+    "type": "default"
+  },
+  "5273": {
+    "code": "5f-32",
+    "type": "default"
+  },
+  "5271": {
+    "code": "5f-33",
+    "type": "default"
+  },
+  "Restroom (Gender Inclusive, 5F)": {
+    "code": "5f-34",
+    "type": "restroom"
+  },
+  "Staircase (5F Northeast)": {
+    "code": "5f-35",
+    "type": "default"
+  },
+  "Elevator (5F Northeast)": {
+    "code": "5f-36",
+    "type": "elevator"
+  },
+  "5506": {
+    "code": "5f-37",
+    "type": "default"
+  },
+  "5514": {
+    "code": "5f-38",
+    "type": "default"
+  },
+  "5532": {
+    "code": "5f-39",
+    "type": "default"
+  },
+  "SEAS Cafe": {
+    "code": "5f-40",
+    "type": "default"
+  },
+  "Staircase (5F Northwest)": {
+    "code": "5f-41",
+    "type": "default"
+  },
+  "Elevator (5F Northwest)": {
+    "code": "5f-42",
+    "type": "elevator"
+  },
+  "5662": {
+    "code": "5f-43",
+    "type": "default"
+  },
+  "5664": {
+    "code": "5f-44",
+    "type": "default"
+  },
+  "5668": {
+    "code": "5f-45",
+    "type": "default"
+  },
+  "5800": {
+    "code": "5f-46",
+    "type": "default"
+  },
+  "5802": {
+    "code": "5f-47",
+    "type": "default"
+  },
+  "5806": {
+    "code": "5f-48",
+    "type": "default"
+  },
+  "5824": {
+    "code": "5f-49",
+    "type": "default"
+  },
+  "5826": {
+    "code": "5f-50",
+    "type": "default"
+  },
+  "5832": {
+    "code": "5f-51",
+    "type": "default"
+  },
+  "5819": {
+    "code": "5f-52",
+    "type": "default"
+  },
+  "5818": {
+    "code": "5f-53",
+    "type": "default"
+  },
+  "5805": {
+    "code": "5f-54",
+    "type": "default"
+  },
+  "5801": {
+    "code": "5f-55",
+    "type": "default"
+  },
+  "5667": {
+    "code": "5f-56",
+    "type": "default"
+  },
+  "5651": {
+    "code": "5f-57",
+    "type": "default"
+  },
+  "Elevator (5F Southwest)": {
+    "code": "5f-58",
+    "type": "elevator"
+  },
+  "Staircase (5F Southwest)": {
+    "code": "5f-59",
+    "type": "default"
+  },
+  "5766": {
+    "code": "5f-60",
+    "type": "default"
+  },
+  "5764": {
+    "code": "5f-61",
+    "type": "default"
+  },
+  "5756": {
+    "code": "5f-62",
+    "type": "default"
+  },
+  "Restroom (Men, 5F South)": {
+    "code": "5f-63",
+    "type": "restroom"
+  },
+  "5750": {
+    "code": "5f-64",
+    "type": "default"
+  },
+  "5732": {
+    "code": "5f-65",
+    "type": "default"
+  },
+  "5714": {
+    "code": "5f-66",
+    "type": "default"
+  },
+  "5704": {
+    "code": "5f-67",
+    "type": "default"
+  },
+  "5440": {
+    "code": "5f-68",
+    "type": "default"
+  },
+  "5705": {
+    "code": "5f-69",
+    "type": "default"
+  },
+  "5713": {
+    "code": "5f-70",
+    "type": "default"
+  },
+  "5731": {
+    "code": "5f-71",
+    "type": "default"
+  },
+  "Exit (5F East, to Science Court)": {
+    "code": "5f-126",
+    "type": "exit"
+  },
+  "Elevator (6F Northeast)": {
+    "code": "6f-2",
+    "type": "elevator"
+  },
+  "Staircase (6F Northeast)": {
+    "code": "6f-3",
+    "type": "default"
+  },
+  "6266": {
+    "code": "6f-4",
+    "type": "default"
+  },
+  "6270": {
+    "code": "6f-5",
+    "type": "default"
+  },
+  "Restroom (Men, 6F Northeast)": {
+    "code": "6f-6",
+    "type": "restroom"
+  },
+  "6271": {
+    "code": "6f-7",
+    "type": "default"
+  },
+  "6275": {
+    "code": "6f-8",
+    "type": "default"
+  },
+  "6279": {
+    "code": "6f-9",
+    "type": "default"
+  },
+  "6288": {
+    "code": "6f-11",
+    "type": "default"
+  },
+  "6291": {
+    "code": "6f-12",
+    "type": "default"
+  },
+  "6408": {
+    "code": "6f-13",
+    "type": "default"
+  },
+  "6412": {
+    "code": "6f-14",
+    "type": "default"
+  },
+  "6415": {
+    "code": "6f-15",
+    "type": "default"
+  },
+  "6417": {
+    "code": "6f-16",
+    "type": "default"
+  },
+  "6421": {
+    "code": "6f-17",
+    "type": "default"
+  },
+  "Restroom (Women, 6F South)": {
+    "code": "6f-18",
+    "type": "restroom"
+  },
+  "6426": {
+    "code": "6f-19",
+    "type": "default"
+  },
+  "Staircase (6F Southeast)": {
+    "code": "6f-20",
+    "type": "default"
+  },
+  "Elevator (6F Southeast)": {
+    "code": "6f-21",
+    "type": "elevator"
+  },
+  "6704": {
+    "code": "6f-22",
+    "type": "default"
+  },
+  "6707": {
+    "code": "6f-23",
+    "type": "default"
+  },
+  "6713": {
+    "code": "6f-24",
+    "type": "default"
+  },
+  "6714": {
+    "code": "6f-25",
+    "type": "default"
+  },
+  "6722": {
+    "code": "6f-26",
+    "type": "default"
+  },
+  "6723": {
+    "code": "6f-27",
+    "type": "default"
+  },
+  "6726": {
+    "code": "6f-28",
+    "type": "default"
+  },
+  "6730": {
+    "code": "6f-29",
+    "type": "default"
+  },
+  "6729": {
+    "code": "6f-30",
+    "type": "default"
+  },
+  "6731": {
+    "code": "6f-31",
+    "type": "default"
+  },
+  "Staircase (6F Southwest)": {
+    "code": "6f-32",
+    "type": "default"
+  },
+  "Restroom (Gender Inclusive, 6F)": {
+    "code": "6f-33",
+    "type": "restroom"
+  },
+  "6756": {
+    "code": "6f-34",
+    "type": "default"
+  },
+  "Elevator (6F Southwest)": {
+    "code": "6f-35",
+    "type": "elevator"
+  },
+  "6764": {
+    "code": "6f-36",
+    "type": "default"
+  },
+  "6817": {
+    "code": "6f-37",
+    "type": "default"
+  },
+  "6818": {
+    "code": "6f-38",
+    "type": "default"
+  },
+  "6820": {
+    "code": "6f-39",
+    "type": "default"
+  },
+  "6763": {
+    "code": "6f-40",
+    "type": "default"
+  },
+  "6815": {
+    "code": "6f-41",
+    "type": "default"
+  },
+  "6807": {
+    "code": "6f-42",
+    "type": "default"
+  },
+  "6810": {
+    "code": "6f-43",
+    "type": "default"
+  },
+  "6802": {
+    "code": "6f-44",
+    "type": "default"
+  },
+  "6805": {
+    "code": "6f-45",
+    "type": "default"
+  },
+  "6689": {
+    "code": "6f-46",
+    "type": "default"
+  },
+  "6678": {
+    "code": "6f-47",
+    "type": "default"
+  },
+  "6679": {
+    "code": "6f-48",
+    "type": "default"
+  },
+  "6673": {
+    "code": "6f-49",
+    "type": "default"
+  },
+  "6672": {
+    "code": "6f-50",
+    "type": "default"
+  },
+  "Staircase (6F Northwest)": {
+    "code": "6f-51",
+    "type": "default"
+  },
+  "6549": {
+    "code": "6f-52",
+    "type": "default"
+  },
+  "6557": {
+    "code": "6f-53",
+    "type": "default"
+  },
+  "Restroom (Men, 6F Northwest)": {
+    "code": "6f-54",
+    "type": "restroom"
+  },
+  "6631": {
+    "code": "6f-55",
+    "type": "default"
+  },
+  "6564": {
+    "code": "6f-56",
+    "type": "default"
+  },
+  "Elevator (6F Northwest)": {
+    "code": "6f-57",
+    "type": "elevator"
+  },
+  "6541": {
+    "code": "6f-58",
+    "type": "default"
+  },
+  "6532": {
+    "code": "6f-59",
+    "type": "default"
+  },
+  "6528": {
+    "code": "6f-60",
+    "type": "default"
+  },
+  "6535": {
+    "code": "6f-61",
+    "type": "default"
+  },
+  "6531": {
+    "code": "6f-62",
+    "type": "default"
+  },
+  "6513": {
+    "code": "6f-63",
+    "type": "default"
+  },
+  "6514": {
+    "code": "6f-64",
+    "type": "default"
+  },
+  "6506": {
+    "code": "6f-65",
+    "type": "default"
+  },
+  "6505": {
+    "code": "6f-66",
+    "type": "default"
+  },
+  "6750": {
+    "code": "6f-129",
+    "type": "default"
+  },
+  "Exit (6F Northeast, to MS)": {
+    "code": "6f-67",
+    "type": "exit"
+  },
+  "Exit (6F Southwest, to E4)": {
+    "code": "6f-68",
+    "type": "exit"
+  },
+  "Exit (6F Northwest, to MS)": {
+    "code": "6f-69",
+    "type": "exit"
+  },
+  "7256": {
+    "code": "7f-1",
+    "type": "default"
+  },
+  "Elevator (7F Northeast)": {
+    "code": "7f-2",
+    "type": "elevator"
+  },
+  "Staircase (7F Northeast)": {
+    "code": "7f-3",
+    "type": "default"
+  },
+  "7268": {
+    "code": "7f-4",
+    "type": "default"
+  },
+  "Restroom (Men, 7F North)": {
+    "code": "7f-5",
+    "type": "restroom"
+  },
+  "7276": {
+    "code": "7f-7",
+    "type": "default"
+  },
+  "7400": {
+    "code": "7f-8",
+    "type": "default"
+  },
+  "7408": {
+    "code": "7f-9",
+    "type": "default"
+  },
+  "7412": {
+    "code": "7f-10",
+    "type": "default"
+  },
+  "7420": {
+    "code": "7f-11",
+    "type": "default"
+  },
+  "Stack (7F)": {
+    "code": "7f-12",
+    "type": "default"
+  },
+  "7421": {
+    "code": "7f-13",
+    "type": "default"
+  },
+  "Restroom (Women, 7F South)": {
+    "code": "7f-14",
+    "type": "restroom"
+  },
+  "Staircase (7F Southeast)": {
+    "code": "7f-16",
+    "type": "default"
+  },
+  "Elevator (7F Southeast)": {
+    "code": "7f-17",
+    "type": "elevator"
+  },
+  "7440": {
+    "code": "7f-18",
+    "type": "default"
+  },
+  "7702": {
+    "code": "7f-19",
+    "type": "default"
+  },
+  "7707": {
+    "code": "7f-20",
+    "type": "default"
+  },
+  "7713": {
+    "code": "7f-21",
+    "type": "default"
+  },
+  "7714": {
+    "code": "7f-22",
+    "type": "default"
+  },
+  "7730": {
+    "code": "7f-23",
+    "type": "default"
+  },
+  "7717": {
+    "code": "7f-24",
+    "type": "default"
+  },
+  "7719": {
+    "code": "7f-25",
+    "type": "default"
+  },
+  "7729": {
+    "code": "7f-26",
+    "type": "default"
+  },
+  "7731": {
+    "code": "7f-27",
+    "type": "default"
+  },
+  "7732": {
+    "code": "7f-28",
+    "type": "default"
+  },
+  "7737": {
+    "code": "7f-29",
+    "type": "default"
+  },
+  "7736": {
+    "code": "7f-30",
+    "type": "default"
+  },
+  "7738": {
+    "code": "7f-31",
+    "type": "default"
+  },
+  "7745": {
+    "code": "7f-32",
+    "type": "default"
+  },
+  "7750": {
+    "code": "7f-33",
+    "type": "default"
+  },
+  "Staircase (7F Southwest)": {
+    "code": "7f-34",
+    "type": "default"
+  },
+  "Restroom (Men, 7F South)": {
+    "code": "7f-35",
+    "type": "restroom"
+  },
+  "7756": {
+    "code": "7f-36",
+    "type": "default"
+  },
+  "7764": {
+    "code": "7f-37",
+    "type": "default"
+  },
+  "Elevator (7F Southwest)": {
+    "code": "7f-38",
+    "type": "elevator"
+  },
+  "7763": {
+    "code": "7f-39",
+    "type": "default"
+  },
+  "7765": {
+    "code": "7f-40",
+    "type": "default"
+  },
+  "7818": {
+    "code": "7f-41",
+    "type": "default"
+  },
+  "7816": {
+    "code": "7f-42",
+    "type": "default"
+  },
+  "7813": {
+    "code": "7f-43",
+    "type": "default"
+  },
+  "7814": {
+    "code": "7f-44",
+    "type": "default"
+  },
+  "7804": {
+    "code": "7f-45",
+    "type": "default"
+  },
+  "7802": {
+    "code": "7f-46",
+    "type": "default"
+  },
+  "7801": {
+    "code": "7f-47",
+    "type": "default"
+  },
+  "7820": {
+    "code": "7f-48",
+    "type": "default"
+  },
+  "7681": {
+    "code": "7f-49",
+    "type": "default"
+  },
+  "7680": {
+    "code": "7f-50",
+    "type": "default"
+  },
+  "7678": {
+    "code": "7f-51",
+    "type": "default"
+  },
+  "7675": {
+    "code": "7f-52",
+    "type": "default"
+  },
+  "7673": {
+    "code": "7f-53",
+    "type": "default"
+  },
+  "7674": {
+    "code": "7f-54",
+    "type": "default"
+  },
+  "7672": {
+    "code": "7f-55",
+    "type": "default"
+  },
+  "Staircase (7F Northwest)": {
+    "code": "7f-56",
+    "type": "default"
+  },
+  "7564": {
+    "code": "7f-57",
+    "type": "default"
+  },
+  "7631": {
+    "code": "7f-58",
+    "type": "default"
+  },
+  "Restroom (Women, 7F North)": {
+    "code": "7f-59",
+    "type": "restroom"
+  },
+  "Elevator (7F Northwest)": {
+    "code": "7f-60",
+    "type": "elevator"
+  },
+  "7557": {
+    "code": "7f-61",
+    "type": "default"
+  },
+  "7549": {
+    "code": "7f-62",
+    "type": "default"
+  },
+  "7535": {
+    "code": "7f-63",
+    "type": "default"
+  },
+  "7538": {
+    "code": "7f-64",
+    "type": "default"
+  },
+  "7534": {
+    "code": "7f-65",
+    "type": "default"
+  },
+  "7530": {
+    "code": "7f-66",
+    "type": "default"
+  },
+  "7523": {
+    "code": "7f-67",
+    "type": "default"
+  },
+  "7528": {
+    "code": "7f-68",
+    "type": "default"
+  },
+  "7524": {
+    "code": "7f-69",
+    "type": "default"
+  },
+  "7520": {
+    "code": "7f-70",
+    "type": "default"
+  },
+  "7514": {
+    "code": "7f-71",
+    "type": "default"
+  },
+  "7513": {
+    "code": "7f-72",
+    "type": "default"
+  },
+  "7506": {
+    "code": "7f-73",
+    "type": "default"
+  },
+  "7503": {
+    "code": "7f-74",
+    "type": "default"
+  },
+  "Exit (7F Northeast, to MS)": {
+    "code": "7f-75",
+    "type": "exit"
+  },
+  "Exit (7F Northwest, to MS)": {
+    "code": "7f-76",
+    "type": "exit"
+  },
+  "8251": {
+    "code": "8f-2",
+    "type": "default"
+  },
+  "Elevator (8F Northeast)": {
+    "code": "8f-3",
+    "type": "elevator"
+  },
+  "Staircase (8F Northeast)": {
+    "code": "8f-4",
+    "type": "default"
+  },
+  "Engineering Library": {
+    "code": "8f-5",
+    "type": "default"
+  },
+  "Elevator (8F Stack)": {
+    "code": "8f-6",
+    "type": "elevator"
+  },
+  "Staircase (8F Stack, North)": {
+    "code": "8f-7",
+    "type": "default"
+  },
+  "Engineering Library Stack": {
+    "code": "8f-8",
+    "type": "default"
+  },
+  "8270E": {
+    "code": "8f-9",
+    "type": "default"
+  },
+  "8270X": {
+    "code": "8f-10",
+    "type": "default"
+  },
+  "8270J": {
+    "code": "8f-11",
+    "type": "default"
+  },
+  "8270H": {
+    "code": "8f-12",
+    "type": "default"
+  },
+  "8427": {
+    "code": "8f-13",
+    "type": "default"
+  },
+  "Staircase (8F Southeast)": {
+    "code": "8f-14",
+    "type": "default"
+  },
+  "Elevator (8F Southeast)": {
+    "code": "8f-15",
+    "type": "elevator"
+  },
+  "Reading Room": {
+    "code": "8f-16",
+    "type": "default"
+  },
+  "8438": {
+    "code": "8f-17",
+    "type": "default"
+  },
+  "Staircase (8F Southwest)": {
+    "code": "8f-21",
+    "type": "default"
+  },
+  "Elevator (8F Southwest)": {
+    "code": "8f-22",
+    "type": "elevator"
+  },
+  "8761": {
+    "code": "8f-23",
+    "type": "default"
+  },
+  "Restroom (Gender Inclusive, 8F)": {
+    "code": "8f-24",
+    "type": "restroom"
+  },
+  "Staircase (8F Northwest)": {
+    "code": "8f-26",
+    "type": "default"
+  },
+  "Elevator (8F Northwest)": {
+    "code": "8f-25",
+    "type": "elevator"
+  },
+  "8500": {
+    "code": "8f-27",
+    "type": "default"
+  },
+  "9258": {
+    "code": "9f-1",
+    "type": "default"
+  },
+  "9249": {
+    "code": "9f-2",
+    "type": "default"
+  },
+  "Elevator (9F North)": {
+    "code": "9f-3",
+    "type": "elevator"
+  },
+  "Staircase (9F North)": {
+    "code": "9f-4",
+    "type": "default"
+  },
+  "Restroom (Women, 9F)": {
+    "code": "9f-5",
+    "type": "restroom"
+  },
+  "9264": {
+    "code": "9f-6",
+    "type": "default"
+  },
+  "9275": {
+    "code": "9f-7",
+    "type": "default"
+  },
+  "9277": {
+    "code": "9f-8",
+    "type": "default"
+  },
+  "9401": {
+    "code": "9f-9",
+    "type": "default"
+  },
+  "9407": {
+    "code": "9f-10",
+    "type": "default"
+  },
+  "9413": {
+    "code": "9f-11",
+    "type": "default"
+  },
+  "Restroom (Men, 9F)": {
+    "code": "9f-12",
+    "type": "restroom"
+  },
+  "9435": {
+    "code": "9f-13",
+    "type": "default"
+  },
+  "Staircase (9F South)": {
+    "code": "9f-43",
+    "type": "default"
+  },
+  "9432": {
+    "code": "9f-14",
+    "type": "default"
+  },
+  "9434": {
+    "code": "9f-15",
+    "type": "default"
+  },
+  "9436": {
+    "code": "9f-16",
+    "type": "default"
+  },
+  "Elevator (9F South)": {
+    "code": "9f-17",
+    "type": "elevator"
+  },
+  "9410": {
+    "code": "9f-18",
+    "type": "default"
+  },
+  "9406": {
+    "code": "9f-19",
+    "type": "default"
+  },
+  "9404": {
+    "code": "9f-20",
+    "type": "default"
+  }
 }
