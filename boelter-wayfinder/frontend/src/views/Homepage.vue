@@ -9,17 +9,28 @@
             </div>
         </div>
         <!-- search bar -->
-        <v-autocomplete
-          v-model="destination"
-          :items="destinationOptions"
-          item-title="label"
-          item-value="value"
-          prepend-inner-icon="mdi-magnify"
-          placeholder="Where do you want to go?"
-          outlined
-          dense
-          class="search-bar"
-        />
+         <div class="search-web">
+          <v-select
+            v-model="selectedCategory"
+            :items="categoryOptions"
+            item-title="label"
+            item-value="value"
+            label="Destination Type"
+            class="filter-web"
+          ></v-select>
+          <v-autocomplete
+            v-model="destination"
+            :items="destinationOptions"
+            item-title="label"
+            item-value="value"
+            prepend-inner-icon="mdi-magnify"
+            placeholder="Where would you like to go?"
+            outlined
+            dense
+            class="search-bar"
+          />
+         </div>
+      
          <!-- suggestions -->
         <div class="mt-4 text-left w-100">
           <div class="subtitle">Suggested Destinations</div>
@@ -59,7 +70,7 @@
             item-value="value"
             prepend-inner-icon="mdi-magnify"
             menu-icon=""
-            placeholder="Where do you want to go?"
+            placeholder="Where would you like to go?"
             outlined
             dense
             hide-details
@@ -132,13 +143,18 @@
   const dialog = ref(false)
   const selectedCategory = ref('none')
   const filterLabel = computed(() => {
-  switch (selectedCategory.value) {
-      case 'restroom': return 'Restrooms'
-      case 'exit': return 'Exits'
-      case 'elevator': return 'Elevators'
-      default: return 'No Filter'
-    }
+    switch (selectedCategory.value) {
+        case 'restroom': return 'Restrooms'
+        case 'exit': return 'Exits'
+        case 'elevator': return 'Elevators'
+        default: return 'No Filter'
+      }
   })
+  const categoryOptions = [
+    {label:'Any', value: 'none'},
+    {label:'Restrooms', value: 'restroom'},
+    {label:'Exits', value: 'exit'},
+    {label:'Elevators', value: 'elevator'}]
 
 
   // input field 
@@ -160,13 +176,13 @@
   // suggestion field
   const suggestions = [
     'Engineering Library', 
-    '8500', 
-    '8251',
-    '3400',
+    'Nearest Restroom (Gender Inclusive)', 
     'Nearest Restroom (W)', 
     'Nearest Restroom (M)',
-    'Nearest Restroom (Gender Inclusive)', 
+    '8500', 
+    '8251',
     '5440',
+    '3400',
     'SEAS Cafe'
   ]
   
@@ -222,6 +238,14 @@
   display: flex;
   flex-direction: row;
   align-items:center;
+}
+.search-web{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+.filter-web{
+  width: 30%;
 }
 
 </style>
