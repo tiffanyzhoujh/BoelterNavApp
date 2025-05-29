@@ -99,6 +99,9 @@
                 <v-radio label="Restrooms" value="restroom" />
                 <v-radio label="Exits" value="exit" />
                 <v-radio label="Elevators" value="elevator" />
+                <v-radio label="Classrooms" value="classroom" />
+                <v-radio label="Offices" value="office" />
+                <v-radio label="Labs" value="lab" />
               </v-radio-group>
             </v-card-text>
             <v-card-actions>
@@ -148,6 +151,9 @@
         case 'restroom': return 'Restrooms'
         case 'exit': return 'Exits'
         case 'elevator': return 'Elevators'
+        case 'classroom': return 'Classrooms'
+        case 'office': return 'Offices'
+        case 'lab': return 'Labs'
         default: return 'No Filter'
       }
   })
@@ -155,7 +161,11 @@
     {label:'Any', value: 'none'},
     {label:'Restrooms', value: 'restroom'},
     {label:'Exits', value: 'exit'},
-    {label:'Elevators', value: 'elevator'}]
+    {label:'Elevators', value: 'elevator'},
+    {label:'Classrooms', value: 'classroom'},
+    {label:'Offices', value: 'office'},
+    {label:'Labs', value: 'lab'}
+  ]
 
 
   // input field 

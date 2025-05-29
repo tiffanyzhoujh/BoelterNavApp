@@ -5,27 +5,27 @@
   },
   "1538": {
     "code": "1f-2",
-    "type": "default"
+    "type": "lab"
   },
   "1542": {
     "code": "1f-3",
-    "type": "default"
+    "type": "lab"
   },
   "1540": {
     "code": "1f-4",
-    "type": "default"
+    "type": "lab"
   },
   "1541": {
     "code": "1f-5",
-    "type": "default"
+    "type": "lab"
   },
   "1549": {
     "code": "1f-6",
-    "type": "default"
+    "type": "lab"
   },
   "1550": {
     "code": "1f-7",
-    "type": "default"
+    "type": "office"
   },
   "Restroom (Women, 1F)": {
     "code": "1f-8",
@@ -45,15 +45,15 @@
   },
   "1564": {
     "code": "1f-12",
-    "type": "default"
+    "type": "lab"
   },
   "1561": {
     "code": "1f-13",
-    "type": "default"
+    "type": "lab"
   },
   "1567": {
     "code": "1f-14",
-    "type": "default"
+    "type": "lab"
   },
   "Exit (1F Northwest)": {
     "code": "1f-15",
@@ -65,15 +65,15 @@
   },
   "1805": {
     "code": "1f-17",
-    "type": "default"
+    "type": "lab"
   },
   "1763": {
     "code": "1f-18",
-    "type": "default"
+    "type": "lab"
   },
   "1762A": {
     "code": "1f-19",
-    "type": "default"
+    "type": "office"
   },
   "Restroom (Men, 1F)": {
     "code": "1f-20",
@@ -125,7 +125,7 @@
   },
   "2567": {
     "code": "2f-7",
-    "type": "default"
+    "type": "office"
   },
   "2568": {
     "code": "2f-8",
@@ -133,7 +133,7 @@
   },
   "2685": {
     "code": "2f-9",
-    "type": "default"
+    "type": "office"
   },
   "2805": {
     "code": "2f-10",
@@ -141,27 +141,27 @@
   },
   "2817": {
     "code": "2f-11",
-    "type": "default"
+    "type": "lab"
   },
   "2821": {
     "code": "2f-12",
-    "type": "default"
+    "type": "lab"
   },
   "2825": {
     "code": "2f-13",
-    "type": "default"
+    "type": "lab"
   },
   "2760": {
     "code": "2f-14",
-    "type": "default"
+    "type": "classroom"
   },
   "2763": {
     "code": "2f-15",
-    "type": "default"
+    "type": "lab"
   },
   "2761": {
     "code": "2f-16",
-    "type": "default"
+    "type": "lab"
   },
   "Elevator (2F Southwest)": {
     "code": "2f-17",
@@ -193,23 +193,23 @@
   },
   "2664 & 2684": {
     "code": "2f-24",
-    "type": "default"
+    "type": "lab"
   },
   "2542": {
     "code": "2f-25",
-    "type": "default"
+    "type": "office"
   },
   "2541": {
     "code": "2f-26",
-    "type": "default"
+    "type": "lab"
   },
   "2521": {
     "code": "2f-27",
-    "type": "default"
+    "type": "lab"
   },
   "2522": {
     "code": "2f-28",
-    "type": "default"
+    "type": "lab"
   },
   "2528": {
     "code": "2f-29",
@@ -217,7 +217,7 @@
   },
   "2518": {
     "code": "2f-30",
-    "type": "default"
+    "type": "lab"
   },
   "2501ST": {
     "code": "2f-31",
@@ -225,7 +225,7 @@
   },
   "2517": {
     "code": "2f-32",
-    "type": "default"
+    "type": "office"
   },
   "2513": {
     "code": "2f-33",
@@ -237,7 +237,7 @@
   },
   "2264": {
     "code": "2f-35",
-    "type": "default"
+    "type": "lab"
   },
   "Elevator (2F Northeast)": {
     "code": "2f-36",
@@ -253,7 +253,7 @@
   },
   "2270": {
     "code": "2f-39",
-    "type": "default"
+    "type": "office"
   },
   "2274": {
     "code": "2f-40",
@@ -293,7 +293,7 @@
   },
   "2432": {
     "code": "2f-49",
-    "type": "default"
+    "type": "lab"
   },
   "Elevator (2F Southeast)": {
     "code": "2f-50",
@@ -301,11 +301,11 @@
   },
   "2438": {
     "code": "2f-51",
-    "type": "default"
+    "type": "office"
   },
   "2444": {
     "code": "2f-52",
-    "type": "default"
+    "type": "classroom"
   },
   "2709": {
     "code": "2f-53",
@@ -317,7 +317,7 @@
   },
   "2713": {
     "code": "2f-55",
-    "type": "default"
+    "type": "office"
   },
   "2714": {
     "code": "2f-56",
@@ -325,11 +325,11 @@
   },
   "2730": {
     "code": "2f-57",
-    "type": "default"
+    "type": "lab"
   },
   "2745": {
     "code": "2f-58",
-    "type": "default"
+    "type": "lab"
   },
   "Exit (2F Southwest)": {
     "code": "2f-59",
@@ -341,11 +341,11 @@
   },
   "3256N": {
     "code": "3f-1",
-    "type": "default"
+    "type": "office"
   },
   "3256A": {
     "code": "3f-2",
-    "type": "default"
+    "type": "lab"
   },
   "3507": {
     "code": "3f-3",
@@ -357,7 +357,7 @@
   },
   "3514": {
     "code": "3f-5",
-    "type": "default"
+    "type": "office"
   },
   "Exit (3F Northeast, to MS)": {
     "code": "3f-6",
@@ -369,15 +369,15 @@
   },
   "3532": {
     "code": "3f-8",
-    "type": "default"
+    "type": "office"
   },
   "3531": {
     "code": "3f-9",
-    "type": "default"
+    "type": "office"
   },
   "3551": {
     "code": "3f-10",
-    "type": "default"
+    "type": "office"
   },
   "Staircase (3F Northwest)": {
     "code": "3f-11",
@@ -405,7 +405,7 @@
   },
   "3563": {
     "code": "3f-17",
-    "type": "default"
+    "type": "office"
   },
   "Exit (3F Northwest, to MS)": {
     "code": "3f-18",
@@ -413,15 +413,15 @@
   },
   "3815": {
     "code": "3f-19",
-    "type": "default"
+    "type": "office"
   },
   "3770": {
     "code": "3f-20",
-    "type": "default"
+    "type": "lab"
   },
   "3771": {
     "code": "3f-21",
-    "type": "default"
+    "type": "office"
   },
   "3759": {
     "code": "3f-22",
@@ -433,7 +433,7 @@
   },
   "3760": {
     "code": "3f-24",
-    "type": "default"
+    "type": "lab"
   },
   "3756": {
     "code": "3f-25",
@@ -449,23 +449,23 @@
   },
   "3750": {
     "code": "3f-28",
-    "type": "default"
+    "type": "office"
   },
   "3732": {
     "code": "3f-29",
-    "type": "default"
+    "type": "office"
   },
   "3731": {
     "code": "3f-30",
-    "type": "default"
+    "type": "office"
   },
   "3714": {
     "code": "3f-31",
-    "type": "default"
+    "type": "office"
   },
   "3713": {
     "code": "3f-32",
-    "type": "default"
+    "type": "office"
   },
   "3705": {
     "code": "3f-33",
@@ -473,15 +473,15 @@
   },
   "3704": {
     "code": "3f-34",
-    "type": "default"
+    "type": "lab"
   },
   "3440": {
     "code": "3f-35",
-    "type": "default"
+    "type": "lab"
   },
   "3436": {
     "code": "3f-36",
-    "type": "default"
+    "type": "lab"
   },
   "Elevator (3F Southeast)": {
     "code": "3f-37",
@@ -497,7 +497,7 @@
   },
   "3428": {
     "code": "3f-40",
-    "type": "default"
+    "type": "lab"
   },
   "Restroom (Women, 3F South)": {
     "code": "3f-41",
@@ -509,15 +509,15 @@
   },
   "3417": {
     "code": "3f-43",
-    "type": "default"
+    "type": "lab"
   },
   "3420": {
     "code": "3f-44",
-    "type": "default"
+    "type": "lab"
   },
   "3413": {
     "code": "3f-45",
-    "type": "default"
+    "type": "lab"
   },
   "3412": {
     "code": "3f-46",
@@ -525,7 +525,7 @@
   },
   "3409": {
     "code": "3f-47",
-    "type": "default"
+    "type": "office"
   },
   "3294": {
     "code": "3f-48",
@@ -533,7 +533,7 @@
   },
   "3400": {
     "code": "3f-49",
-    "type": "default"
+    "type": "classroom"
   },
   "3292": {
     "code": "3f-50",
@@ -541,15 +541,15 @@
   },
   "3285": {
     "code": "3f-51",
-    "type": "default"
+    "type": "lab"
   },
   "3277": {
     "code": "3f-52",
-    "type": "default"
+    "type": "lab"
   },
   "3286": {
     "code": "3f-53",
-    "type": "default"
+    "type": "lab"
   },
   "3271": {
     "code": "3f-54",
@@ -561,11 +561,11 @@
   },
   "3276": {
     "code": "3f-56",
-    "type": "default"
+    "type": "lab"
   },
   "3256S": {
     "code": "3f-57",
-    "type": "default"
+    "type": "office"
   },
   "Staircase (3F Northeast)": {
     "code": "3f-58",
@@ -585,11 +585,11 @@
   },
   "4251": {
     "code": "4f-2",
-    "type": "default"
+    "type": "lab"
   },
   "4256": {
     "code": "4f-3",
-    "type": "default"
+    "type": "lab"
   },
   "Elevator (4F Northeast)": {
     "code": "4f-5",
@@ -597,7 +597,7 @@
   },
   "4264": {
     "code": "4f-6",
-    "type": "default"
+    "type": "office"
   },
   "Staircase (4F Northeast)": {
     "code": "4f-7",
@@ -605,7 +605,7 @@
   },
   "4266": {
     "code": "4f-8",
-    "type": "default"
+    "type": "office"
   },
   "Restroom (Men, 4F North)": {
     "code": "4f-9",
@@ -617,11 +617,11 @@
   },
   "4272": {
     "code": "4f-11",
-    "type": "default"
+    "type": "office"
   },
   "4274": {
     "code": "4f-12",
-    "type": "default"
+    "type": "office"
   },
   "4275": {
     "code": "4f-13",
@@ -629,35 +629,35 @@
   },
   "4280": {
     "code": "4f-14",
-    "type": "default"
+    "type": "office"
   },
   "4283": {
     "code": "4f-15",
-    "type": "default"
+    "type": "classroom"
   },
   "4403": {
     "code": "4f-16",
-    "type": "default"
+    "type": "lab"
   },
   "4405": {
     "code": "4f-17",
-    "type": "default"
+    "type": "lab"
   },
   "4404": {
     "code": "4f-18",
-    "type": "default"
+    "type": "lab"
   },
   "4413": {
     "code": "4f-19",
-    "type": "default"
+    "type": "classroom"
   },
   "4417": {
     "code": "4f-20",
-    "type": "default"
+    "type": "office"
   },
   "4420": {
     "code": "4f-21",
-    "type": "default"
+    "type": "lab"
   },
   "4421": {
     "code": "4f-22",
@@ -669,7 +669,7 @@
   },
   "4428": {
     "code": "4f-23",
-    "type": "default"
+    "type": "office"
   },
   "Staircase (4F Southeast)": {
     "code": "4f-24",
@@ -677,11 +677,11 @@
   },
   "4432": {
     "code": "4f-25",
-    "type": "default"
+    "type": "lab"
   },
   "4436": {
     "code": "4f-26",
-    "type": "default"
+    "type": "lab"
   },
   "Elevator (4F Southeast)": {
     "code": "4f-27",
@@ -689,19 +689,19 @@
   },
   "4440": {
     "code": "4f-28",
-    "type": "default"
+    "type": "lab"
   },
   "4442": {
     "code": "4f-29",
-    "type": "default"
+    "type": "lab"
   },
   "4707": {
     "code": "4f-30",
-    "type": "default"
+    "type": "lab"
   },
   "4711": {
     "code": "4f-31",
-    "type": "default"
+    "type": "office"
   },
   "4729": {
     "code": "4f-32",
@@ -709,11 +709,11 @@
   },
   "4731": {
     "code": "4f-33",
-    "type": "default"
+    "type": "office"
   },
   "4732": {
     "code": "4f-34",
-    "type": "default"
+    "type": "office"
   },
   "4750": {
     "code": "4f-35",
@@ -741,7 +741,7 @@
   },
   "4837": {
     "code": "4f-41",
-    "type": "default"
+    "type": "office"
   },
   "4834": {
     "code": "4f-42",
@@ -761,7 +761,7 @@
   },
   "4825": {
     "code": "4f-46",
-    "type": "default"
+    "type": "office"
   },
   "4820": {
     "code": "4f-47",
@@ -773,39 +773,39 @@
   },
   "4817": {
     "code": "4f-49",
-    "type": "default"
+    "type": "office"
   },
   "4813": {
     "code": "4f-50",
-    "type": "default"
+    "type": "lab"
   },
   "4809": {
     "code": "4f-51",
-    "type": "default"
+    "type": "office"
   },
   "4810": {
     "code": "4f-52",
-    "type": "default"
+    "type": "office"
   },
   "4806": {
     "code": "4f-53",
-    "type": "default"
+    "type": "office"
   },
   "4805": {
     "code": "4f-54",
-    "type": "default"
+    "type": "office"
   },
   "4803": {
     "code": "4f-55",
-    "type": "default"
+    "type": "office"
   },
   "4802": {
     "code": "4f-56",
-    "type": "default"
+    "type": "office"
   },
   "4686": {
     "code": "4f-57",
-    "type": "default"
+    "type": "lab"
   },
   "4801": {
     "code": "4f-58",
@@ -817,11 +817,11 @@
   },
   "4684": {
     "code": "4f-60",
-    "type": "default"
+    "type": "lab"
   },
   "4680": {
     "code": "4f-61",
-    "type": "default"
+    "type": "lab"
   },
   "4677A": {
     "code": "4f-62",
@@ -829,7 +829,7 @@
   },
   "4677": {
     "code": "4f-63",
-    "type": "default"
+    "type": "lab"
   },
   "4674": {
     "code": "4f-64",
@@ -853,11 +853,11 @@
   },
   "4667": {
     "code": "4f-68",
-    "type": "default"
+    "type": "office"
   },
   "4659": {
     "code": "4f-69",
-    "type": "default"
+    "type": "office"
   },
   "4658": {
     "code": "4f-70",
@@ -873,7 +873,7 @@
   },
   "4651": {
     "code": "4f-73",
-    "type": "default"
+    "type": "office"
   },
   "Restroom (Women, 4F North)": {
     "code": "4f-74",
@@ -893,11 +893,11 @@
   },
   "4531": {
     "code": "4f-78",
-    "type": "default"
+    "type": "office"
   },
   "4532": {
     "code": "4f-79",
-    "type": "default"
+    "type": "office"
   },
   "4528": {
     "code": "4f-80",
@@ -905,15 +905,15 @@
   },
   "4515": {
     "code": "4f-81",
-    "type": "default"
+    "type": "office"
   },
   "4514": {
     "code": "4f-82",
-    "type": "default"
+    "type": "office"
   },
   "4506": {
     "code": "4f-83",
-    "type": "default"
+    "type": "office"
   },
   "4672": {
     "code": "4f-84",
@@ -949,11 +949,11 @@
   },
   "5549": {
     "code": "5f-7",
-    "type": "default"
+    "type": "office"
   },
   "5531": {
     "code": "5f-8",
-    "type": "default"
+    "type": "office"
   },
   "5513": {
     "code": "5f-9",
@@ -961,51 +961,51 @@
   },
   "5249": {
     "code": "5f-10",
-    "type": "default"
+    "type": "classroom"
   },
   "5252": {
     "code": "5f-11",
-    "type": "default"
+    "type": "classroom"
   },
   "5264": {
     "code": "5f-12",
-    "type": "default"
+    "type": "classroom"
   },
   "5272": {
     "code": "5f-13",
-    "type": "default"
+    "type": "classroom"
   },
   "5280": {
     "code": "5f-14",
-    "type": "default"
+    "type": "classroom"
   },
   "5284": {
     "code": "5f-15",
-    "type": "default"
+    "type": "office"
   },
   "5288": {
     "code": "5f-16",
-    "type": "default"
+    "type": "office"
   },
   "5408": {
     "code": "5f-17",
-    "type": "default"
+    "type": "office"
   },
   "5412": {
     "code": "5f-18",
-    "type": "default"
+    "type": "office"
   },
   "5420": {
     "code": "5f-19",
-    "type": "default"
+    "type": "classroom"
   },
   "5422": {
     "code": "5f-20",
-    "type": "default"
+    "type": "classroom"
   },
   "5436": {
     "code": "5f-21",
-    "type": "default"
+    "type": "classroom"
   },
   "Elevator (5F Southeast)": {
     "code": "5f-22",
@@ -1025,15 +1025,15 @@
   },
   "5419": {
     "code": "5f-26",
-    "type": "default"
+    "type": "classroom"
   },
   "5409": {
     "code": "5f-27",
-    "type": "default"
+    "type": "office"
   },
   "5405": {
     "code": "5f-28",
-    "type": "default"
+    "type": "office"
   },
   "5403": {
     "code": "5f-29",
@@ -1041,15 +1041,15 @@
   },
   "5401": {
     "code": "5f-30",
-    "type": "default"
+    "type": "office"
   },
   "5289": {
     "code": "5f-31",
-    "type": "default"
+    "type": "office"
   },
   "5273": {
     "code": "5f-32",
-    "type": "default"
+    "type": "classroom"
   },
   "5271": {
     "code": "5f-33",
@@ -1069,15 +1069,15 @@
   },
   "5506": {
     "code": "5f-37",
-    "type": "default"
+    "type": "office"
   },
   "5514": {
     "code": "5f-38",
-    "type": "default"
+    "type": "classroom"
   },
   "5532": {
     "code": "5f-39",
-    "type": "default"
+    "type": "office"
   },
   "SEAS Cafe": {
     "code": "5f-40",
@@ -1109,11 +1109,11 @@
   },
   "5802": {
     "code": "5f-47",
-    "type": "default"
+    "type": "lab"
   },
   "5806": {
     "code": "5f-48",
-    "type": "default"
+    "type": "lab"
   },
   "5824": {
     "code": "5f-49",
@@ -1129,27 +1129,27 @@
   },
   "5819": {
     "code": "5f-52",
-    "type": "default"
+    "type": "lab"
   },
   "5818": {
     "code": "5f-53",
-    "type": "default"
+    "type": "lab"
   },
   "5805": {
     "code": "5f-54",
-    "type": "default"
+    "type": "lab"
   },
   "5801": {
     "code": "5f-55",
-    "type": "default"
+    "type": "lab"
   },
   "5667": {
     "code": "5f-56",
-    "type": "default"
+    "type": "lab"
   },
   "5651": {
     "code": "5f-57",
-    "type": "default"
+    "type": "lab"
   },
   "Elevator (5F Southwest)": {
     "code": "5f-58",
@@ -1161,11 +1161,11 @@
   },
   "5766": {
     "code": "5f-60",
-    "type": "default"
+    "type": "lab"
   },
   "5764": {
     "code": "5f-61",
-    "type": "default"
+    "type": "lab"
   },
   "5756": {
     "code": "5f-62",
@@ -1177,23 +1177,23 @@
   },
   "5750": {
     "code": "5f-64",
-    "type": "default"
+    "type": "office"
   },
   "5732": {
     "code": "5f-65",
-    "type": "default"
+    "type": "office"
   },
   "5714": {
     "code": "5f-66",
-    "type": "default"
+    "type": "office"
   },
   "5704": {
     "code": "5f-67",
-    "type": "default"
+    "type": "office"
   },
   "5440": {
     "code": "5f-68",
-    "type": "default"
+    "type": "classroom"
   },
   "5705": {
     "code": "5f-69",
@@ -1201,11 +1201,11 @@
   },
   "5713": {
     "code": "5f-70",
-    "type": "default"
+    "type": "office"
   },
   "5731": {
     "code": "5f-71",
-    "type": "default"
+    "type": "office"
   },
   "Exit (5F East, to Science Court)": {
     "code": "5f-126",
@@ -1221,11 +1221,11 @@
   },
   "6266": {
     "code": "6f-4",
-    "type": "default"
+    "type": "office"
   },
   "6270": {
     "code": "6f-5",
-    "type": "default"
+    "type": "lab"
   },
   "Restroom (Men, 6F Northeast)": {
     "code": "6f-6",
@@ -1237,19 +1237,19 @@
   },
   "6275": {
     "code": "6f-8",
-    "type": "default"
+    "type": "office"
   },
   "6279": {
     "code": "6f-9",
-    "type": "default"
+    "type": "office"
   },
   "6288": {
     "code": "6f-11",
-    "type": "default"
+    "type": "office"
   },
   "6291": {
     "code": "6f-12",
-    "type": "default"
+    "type": "office"
   },
   "6408": {
     "code": "6f-13",
@@ -1257,7 +1257,7 @@
   },
   "6412": {
     "code": "6f-14",
-    "type": "default"
+    "type": "office"
   },
   "6415": {
     "code": "6f-15",
@@ -1265,7 +1265,7 @@
   },
   "6417": {
     "code": "6f-16",
-    "type": "default"
+    "type": "office"
   },
   "6421": {
     "code": "6f-17",
@@ -1277,7 +1277,7 @@
   },
   "6426": {
     "code": "6f-19",
-    "type": "default"
+    "type": "office"
   },
   "Staircase (6F Southeast)": {
     "code": "6f-20",
@@ -1289,7 +1289,7 @@
   },
   "6704": {
     "code": "6f-22",
-    "type": "default"
+    "type": "office"
   },
   "6707": {
     "code": "6f-23",
@@ -1297,27 +1297,27 @@
   },
   "6713": {
     "code": "6f-24",
-    "type": "default"
+    "type": "office"
   },
   "6714": {
     "code": "6f-25",
-    "type": "default"
+    "type": "office"
   },
   "6722": {
     "code": "6f-26",
-    "type": "default"
+    "type": "office"
   },
   "6723": {
     "code": "6f-27",
-    "type": "default"
+    "type": "office"
   },
   "6726": {
     "code": "6f-28",
-    "type": "default"
+    "type": "office"
   },
   "6730": {
     "code": "6f-29",
-    "type": "default"
+    "type": "office"
   },
   "6729": {
     "code": "6f-30",
@@ -1325,7 +1325,7 @@
   },
   "6731": {
     "code": "6f-31",
-    "type": "default"
+    "type": "office"
   },
   "Staircase (6F Southwest)": {
     "code": "6f-32",
@@ -1349,7 +1349,7 @@
   },
   "6817": {
     "code": "6f-37",
-    "type": "default"
+    "type": "lab"
   },
   "6818": {
     "code": "6f-38",
@@ -1361,43 +1361,43 @@
   },
   "6763": {
     "code": "6f-40",
-    "type": "default"
+    "type": "lab"
   },
   "6815": {
     "code": "6f-41",
-    "type": "default"
+    "type": "office"
   },
   "6807": {
     "code": "6f-42",
-    "type": "default"
+    "type": "office"
   },
   "6810": {
     "code": "6f-43",
-    "type": "default"
+    "type": "lab"
   },
   "6802": {
     "code": "6f-44",
-    "type": "default"
+    "type": "lab"
   },
   "6805": {
     "code": "6f-45",
-    "type": "default"
+    "type": "office"
   },
   "6689": {
     "code": "6f-46",
-    "type": "default"
+    "type": "office"
   },
   "6678": {
     "code": "6f-47",
-    "type": "default"
+    "type": "lab"
   },
   "6679": {
     "code": "6f-48",
-    "type": "default"
+    "type": "office"
   },
   "6673": {
     "code": "6f-49",
-    "type": "default"
+    "type": "lab"
   },
   "6672": {
     "code": "6f-50",
@@ -1425,7 +1425,7 @@
   },
   "6564": {
     "code": "6f-56",
-    "type": "default"
+    "type": "lab"
   },
   "Elevator (6F Northwest)": {
     "code": "6f-57",
@@ -1433,11 +1433,11 @@
   },
   "6541": {
     "code": "6f-58",
-    "type": "default"
+    "type": "lab"
   },
   "6532": {
     "code": "6f-59",
-    "type": "default"
+    "type": "office"
   },
   "6528": {
     "code": "6f-60",
@@ -1445,11 +1445,11 @@
   },
   "6535": {
     "code": "6f-61",
-    "type": "default"
+    "type": "lab"
   },
   "6531": {
     "code": "6f-62",
-    "type": "default"
+    "type": "lab"
   },
   "6513": {
     "code": "6f-63",
@@ -1465,7 +1465,7 @@
   },
   "6505": {
     "code": "6f-66",
-    "type": "default"
+    "type": "lab"
   },
   "6750": {
     "code": "6f-129",
@@ -1497,7 +1497,7 @@
   },
   "7268": {
     "code": "7f-4",
-    "type": "default"
+    "type": "office"
   },
   "Restroom (Men, 7F North)": {
     "code": "7f-5",
@@ -1509,19 +1509,19 @@
   },
   "7400": {
     "code": "7f-8",
-    "type": "default"
+    "type": "office"
   },
   "7408": {
     "code": "7f-9",
-    "type": "default"
+    "type": "office"
   },
   "7412": {
     "code": "7f-10",
-    "type": "default"
+    "type": "office"
   },
   "7420": {
     "code": "7f-11",
-    "type": "default"
+    "type": "office"
   },
   "Stack (7F)": {
     "code": "7f-12",
@@ -1545,35 +1545,35 @@
   },
   "7440": {
     "code": "7f-18",
-    "type": "default"
+    "type": "office"
   },
   "7702": {
     "code": "7f-19",
-    "type": "default"
+    "type": "office"
   },
   "7707": {
     "code": "7f-20",
-    "type": "default"
+    "type": "office"
   },
   "7713": {
     "code": "7f-21",
-    "type": "default"
+    "type": "lab"
   },
   "7714": {
     "code": "7f-22",
-    "type": "default"
+    "type": "lab"
   },
   "7730": {
     "code": "7f-23",
-    "type": "default"
+    "type": "lab"
   },
   "7717": {
     "code": "7f-24",
-    "type": "default"
+    "type": "lab"
   },
   "7719": {
     "code": "7f-25",
-    "type": "default"
+    "type": "lab"
   },
   "7729": {
     "code": "7f-26",
@@ -1581,31 +1581,31 @@
   },
   "7731": {
     "code": "7f-27",
-    "type": "default"
+    "type": "lab"
   },
   "7732": {
     "code": "7f-28",
-    "type": "default"
+    "type": "lab"
   },
   "7737": {
     "code": "7f-29",
-    "type": "default"
+    "type": "lab"
   },
   "7736": {
     "code": "7f-30",
-    "type": "default"
+    "type": "lab"
   },
   "7738": {
     "code": "7f-31",
-    "type": "default"
+    "type": "lab"
   },
   "7745": {
     "code": "7f-32",
-    "type": "default"
+    "type": "lab"
   },
   "7750": {
     "code": "7f-33",
-    "type": "default"
+    "type": "lab"
   },
   "Staircase (7F Southwest)": {
     "code": "7f-34",
@@ -1621,7 +1621,7 @@
   },
   "7764": {
     "code": "7f-37",
-    "type": "default"
+    "type": "lab"
   },
   "Elevator (7F Southwest)": {
     "code": "7f-38",
@@ -1629,11 +1629,11 @@
   },
   "7763": {
     "code": "7f-39",
-    "type": "default"
+    "type": "lab"
   },
   "7765": {
     "code": "7f-40",
-    "type": "default"
+    "type": "lab"
   },
   "7818": {
     "code": "7f-41",
@@ -1641,11 +1641,11 @@
   },
   "7816": {
     "code": "7f-42",
-    "type": "default"
+    "type": "lab"
   },
   "7813": {
     "code": "7f-43",
-    "type": "default"
+    "type": "office"
   },
   "7814": {
     "code": "7f-44",
@@ -1653,23 +1653,23 @@
   },
   "7804": {
     "code": "7f-45",
-    "type": "default"
+    "type": "lab"
   },
   "7802": {
     "code": "7f-46",
-    "type": "default"
+    "type": "lab"
   },
   "7801": {
     "code": "7f-47",
-    "type": "default"
+    "type": "office"
   },
   "7820": {
     "code": "7f-48",
-    "type": "default"
+    "type": "lab"
   },
   "7681": {
     "code": "7f-49",
-    "type": "default"
+    "type": "office"
   },
   "7680": {
     "code": "7f-50",
@@ -1677,19 +1677,19 @@
   },
   "7678": {
     "code": "7f-51",
-    "type": "default"
+    "type": "lab"
   },
   "7675": {
     "code": "7f-52",
-    "type": "default"
+    "type": "office"
   },
   "7673": {
     "code": "7f-53",
-    "type": "default"
+    "type": "office"
   },
   "7674": {
     "code": "7f-54",
-    "type": "default"
+    "type": "office"
   },
   "7672": {
     "code": "7f-55",
@@ -1701,11 +1701,11 @@
   },
   "7564": {
     "code": "7f-57",
-    "type": "default"
+    "type": "lab"
   },
   "7631": {
     "code": "7f-58",
-    "type": "default"
+    "type": "office"
   },
   "Restroom (Women, 7F North)": {
     "code": "7f-59",
@@ -1721,27 +1721,27 @@
   },
   "7549": {
     "code": "7f-62",
-    "type": "default"
+    "type": "office"
   },
   "7535": {
     "code": "7f-63",
-    "type": "default"
+    "type": "lab"
   },
   "7538": {
     "code": "7f-64",
-    "type": "default"
+    "type": "lab"
   },
   "7534": {
     "code": "7f-65",
-    "type": "default"
+    "type": "lab"
   },
   "7530": {
     "code": "7f-66",
-    "type": "default"
+    "type": "lab"
   },
   "7523": {
     "code": "7f-67",
-    "type": "default"
+    "type": "office"
   },
   "7528": {
     "code": "7f-68",
@@ -1749,27 +1749,27 @@
   },
   "7524": {
     "code": "7f-69",
-    "type": "default"
+    "type": "lab"
   },
   "7520": {
     "code": "7f-70",
-    "type": "default"
+    "type": "lab"
   },
   "7514": {
     "code": "7f-71",
-    "type": "default"
+    "type": "office"
   },
   "7513": {
     "code": "7f-72",
-    "type": "default"
+    "type": "office"
   },
   "7506": {
     "code": "7f-73",
-    "type": "default"
+    "type": "office"
   },
   "7503": {
     "code": "7f-74",
-    "type": "default"
+    "type": "office"
   },
   "Exit (7F Northeast, to MS)": {
     "code": "7f-75",
@@ -1813,15 +1813,15 @@
   },
   "8270X": {
     "code": "8f-10",
-    "type": "default"
+    "type": "office"
   },
   "8270J": {
     "code": "8f-11",
-    "type": "default"
+    "type": "office"
   },
   "8270H": {
     "code": "8f-12",
-    "type": "default"
+    "type": "office"
   },
   "8427": {
     "code": "8f-13",
@@ -1869,15 +1869,15 @@
   },
   "8500": {
     "code": "8f-27",
-    "type": "default"
+    "type": "classroom"
   },
   "9258": {
     "code": "9f-1",
-    "type": "default"
+    "type": "office"
   },
   "9249": {
     "code": "9f-2",
-    "type": "default"
+    "type": "office"
   },
   "Elevator (9F North)": {
     "code": "9f-3",
@@ -1893,27 +1893,27 @@
   },
   "9264": {
     "code": "9f-6",
-    "type": "default"
+    "type": "office"
   },
   "9275": {
     "code": "9f-7",
-    "type": "default"
+    "type": "office"
   },
   "9277": {
     "code": "9f-8",
-    "type": "default"
+    "type": "office"
   },
   "9401": {
     "code": "9f-9",
-    "type": "default"
+    "type": "office"
   },
   "9407": {
     "code": "9f-10",
-    "type": "default"
+    "type": "office"
   },
   "9413": {
     "code": "9f-11",
-    "type": "default"
+    "type": "lab"
   },
   "Restroom (Men, 9F)": {
     "code": "9f-12",
@@ -1929,7 +1929,7 @@
   },
   "9432": {
     "code": "9f-14",
-    "type": "default"
+    "type": "office"
   },
   "9434": {
     "code": "9f-15",
@@ -1937,7 +1937,7 @@
   },
   "9436": {
     "code": "9f-16",
-    "type": "default"
+    "type": "classroom"
   },
   "Elevator (9F South)": {
     "code": "9f-17",
@@ -1945,14 +1945,14 @@
   },
   "9410": {
     "code": "9f-18",
-    "type": "default"
+    "type": "lab"
   },
   "9406": {
     "code": "9f-19",
-    "type": "default"
+    "type": "office"
   },
   "9404": {
     "code": "9f-20",
-    "type": "default"
+    "type": "office"
   }
 }
