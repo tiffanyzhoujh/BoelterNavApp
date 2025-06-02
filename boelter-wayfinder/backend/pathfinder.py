@@ -240,8 +240,8 @@ def get_floorplans(path, output_dir):
         if len(nodes) > 0:
             start_x, start_y = nodes[0]['x'], nodes[0]['y']
             end_x, end_y = nodes[-1]['x'], nodes[-1]['y']
-            print("start coord:",start_x,",",start_y)
-            print("end coord:",end_x,",",end_y)
+            # print("start coord:",start_x,",",start_y)
+            # print("end coord:",end_x,",",end_y)
             if start_x <= end_x:
                 if start_y < 200:
                     img.paste(start_icon_left_below, (start_x-180, start_y), start_icon_left_below)
