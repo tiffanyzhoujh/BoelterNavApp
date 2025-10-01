@@ -66,15 +66,16 @@
       </div>
 
       <div class="bug-report">
-      <v-btn 
-          prepend-icon="mdi-bug"
-          color="red-lighten-2"
-          variant="text"
-          :href="'mailto:boelterwayfinder@gmail.com?subject=Bug Report&body=Please describe the issue you encountered:'"
-        >
-          Report a Bug
+        <v-btn 
+            prepend-icon="mdi-bug"
+            color="red-lighten-2"
+            variant="plain"
+            :href="'mailto:boelterwayfinder@gmail.com?subject=Bug Report&body=Please describe the issue you encountered:'"
+          >
+            Report a Bug
         </v-btn>
-        </div>
+        <small class="author">© 2025 Tiffany Z</small>
+      </div>
     </v-container>
 
 
@@ -139,14 +140,16 @@
         <NullStateFloorPlan v-else/>
       </div>
        <div class="bug-report">
-      <v-btn 
-          prepend-icon="mdi-bug"
-          color="red-lighten-2"
-          variant="text"
-          :href="'mailto:boelterwayfinder@gmail.com?subject=Bug Report&body=Please describe the issue you encountered:'"
-        >
+        <v-btn 
+            prepend-icon="mdi-bug"
+            color="red-lighten-3"
+            variant="text"
+            size="small"
+            :href="'mailto:boelterwayfinder@gmail.com?subject=Bug Report&body=Please describe the issue you encountered:'"
+          >
           Report a Bug
         </v-btn>
+        <small class="author">© 2025 Tiffany Z</small>
         </div>
     </v-container>
 
@@ -254,6 +257,12 @@
   left: 0;
   right: 0;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
+}
+.author {
+  color: gray;
+  font-size: 0.8rem;
 }
 </style>

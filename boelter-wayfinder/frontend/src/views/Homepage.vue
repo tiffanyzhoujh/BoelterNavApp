@@ -54,11 +54,12 @@
           <v-btn 
             prepend-icon="mdi-bug"
             color="red-lighten-2"
-            variant="text"
+            variant="plain"
             :href="'mailto:boelterwayfinder@gmail.com?subject=Bug Report&body=Please describe the issue you encountered:'"
           >
             Report a Bug
           </v-btn>
+          <small class="author">© 2025 Tiffany Z</small>
         </div>
     </v-container>
 
@@ -143,12 +144,14 @@
         <div class="bug-report">
           <v-btn 
             prepend-icon="mdi-bug"
-            color="red-lighten-2"
+            color="red-lighten-3"
             variant="text"
+              size="small"
             :href="'mailto:boelterwayfinder@gmail.com?subject=Bug Report&body=Please describe the issue you encountered:'"
           >
             Report a Bug
           </v-btn>
+          <small class="author">© 2025 Tiffany Z</small>
         </div>
     </v-container>
 </template>
@@ -285,6 +288,11 @@
   right: 0;
   display: flex;
   justify-content: center;
+  flex-direction: column;
+}
+.author {
+  color: gray;
+  font-size: 0.8rem;
 }
 
 </style>
