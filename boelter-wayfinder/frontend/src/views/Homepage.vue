@@ -50,6 +50,16 @@
               </v-chip>
           </v-chip-group>
         </div>
+        <div class="bug-report">
+          <v-btn 
+            prepend-icon="mdi-bug"
+            color="red-lighten-2"
+            variant="text"
+            :href="'mailto:boelterwayfinder@gmail.com?subject=Bug Report&body=Please describe the issue you encountered:'"
+          >
+            Report a Bug
+          </v-btn>
+        </div>
     </v-container>
 
   <!-- mobile view -->
@@ -129,6 +139,16 @@
             </v-chip>
         </v-chip-group>
 
+        </div>
+        <div class="bug-report">
+          <v-btn 
+            prepend-icon="mdi-bug"
+            color="red-lighten-2"
+            variant="text"
+            :href="'mailto:boelterwayfinder@gmail.com?subject=Bug Report&body=Please describe the issue you encountered:'"
+          >
+            Report a Bug
+          </v-btn>
         </div>
     </v-container>
 </template>
@@ -257,6 +277,14 @@
 }
 .filter-web{
   width: 30%;
+}
+.bug-report {
+  position: fixed;
+  bottom: 10px; /* adjust spacing */
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
 }
 
 </style>

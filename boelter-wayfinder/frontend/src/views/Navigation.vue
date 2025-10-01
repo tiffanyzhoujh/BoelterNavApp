@@ -64,6 +64,17 @@
         <InvalidStateFloorPlan v-else-if="start && destination && start === destination"/>
         <NullStateFloorPlan v-else/>
       </div>
+
+      <div class="bug-report">
+      <v-btn 
+          prepend-icon="mdi-bug"
+          color="red-lighten-2"
+          variant="text"
+          :href="'mailto:boelterwayfinder@gmail.com?subject=Bug Report&body=Please describe the issue you encountered:'"
+        >
+          Report a Bug
+        </v-btn>
+        </div>
     </v-container>
 
 
@@ -127,6 +138,16 @@
         <InvalidStateFloorPlan v-else-if="start && destination && start === destination"/>
         <NullStateFloorPlan v-else/>
       </div>
+       <div class="bug-report">
+      <v-btn 
+          prepend-icon="mdi-bug"
+          color="red-lighten-2"
+          variant="text"
+          :href="'mailto:boelterwayfinder@gmail.com?subject=Bug Report&body=Please describe the issue you encountered:'"
+        >
+          Report a Bug
+        </v-btn>
+        </div>
     </v-container>
 
 
@@ -226,5 +247,13 @@
 }
 .input-web {
   width: 20px;
+}
+.bug-report {
+  position: fixed;
+  bottom: 10px; /* adjust spacing */
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
 }
 </style>
